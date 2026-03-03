@@ -10,7 +10,7 @@
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
 body{background:var(--sky);color:var(--white);font-family:var(--font);line-height:1.7;font-size:16px}
 nav{position:sticky;top:0;z-index:100;background:rgba(10,15,30,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;overflow-x:auto}
-nav a{color:var(--gray);text-decoration:none;font-size:.8rem;letter-spacing:.05em;padding:1rem .9rem;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s}
+nav a{color:var(--gray);text-decoration:none;font-size:.78rem;letter-spacing:.04em;padding:1rem .8rem;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s}
 nav a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;padding:4rem 2rem;background:radial-gradient(ellipse at 50% 30%,#0d1f3c 0%,#0a0f1e 70%)}
 .cbg{position:absolute;inset:0;pointer-events:none}
@@ -78,49 +78,66 @@ strong{color:var(--white)}
 .st{color:var(--gray);font-size:.75rem}
 footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-size:.8rem;color:var(--gray)}
 @media(max-width:600px){.ch{grid-template-columns:1fr}.cc.cl{border-right:none;border-bottom:1px solid var(--border)}}
-
-/* EQUATION STYLES */
+/* EQ */
 .eq-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.8rem;margin:1.5rem 0;overflow-x:auto}
-.eq-box .katex-display{margin:.5rem 0}
 .eq-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem;font-weight:700}
-.eq-params{margin-top:1.2rem;display:grid;gap:.5rem}
+.eq-params{margin-top:1.2rem;display:grid;gap:.4rem}
 .eq-param{display:flex;gap:.8rem;align-items:baseline;font-size:.88rem;padding:.4rem 0;border-bottom:1px solid rgba(30,48,80,.6)}
 .eq-param:last-child{border-bottom:none}
-.eq-sym{color:var(--accent);font-family:monospace;min-width:60px;flex-shrink:0}
+.eq-sym{color:var(--accent);font-family:monospace;min-width:70px;flex-shrink:0}
 .eq-desc{color:#b8cadf}
 .rhi-bar{margin:1.5rem 0;background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem}
-.rhi-track{height:28px;border-radius:8px;background:linear-gradient(to right,#1e3a5f 0%,#1e3a5f 49%,rgba(74,222,128,.15) 50%,rgba(74,222,128,.4) 100%);position:relative;margin:1rem 0;overflow:hidden}
-.rhi-marker{position:absolute;top:0;bottom:0;width:2px;background:rgba(255,255,255,.5);left:50%}
+.rhi-track{height:28px;border-radius:8px;background:linear-gradient(to right,#1e3a5f 0%,#1e3a5f 49%,rgba(74,222,128,.15) 50%,rgba(74,222,128,.4) 100%);position:relative;margin:1rem 0}
+.rhi-marker{position:absolute;top:0;bottom:0;width:2px;background:rgba(255,255,255,.4);left:50%}
 .rhi-labels{display:flex;justify-content:space-between;font-size:.78rem;color:var(--gray)}
 .rhi-labels span:last-child{color:var(--green)}
-.rhi-title{font-size:.8rem;font-weight:600;color:var(--white);margin-bottom:.3rem}
 .rhi-zones{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
 .rhi-zone{border-radius:8px;padding:.8rem 1rem;font-size:.85rem}
 .rhi-zone.dry{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.2)}
 .rhi-zone.wet{background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.2)}
 .rhi-zone strong{display:block;margin-bottom:.3rem;font-size:.8rem}
-
-/* IMAGE EXPLANATION */
+@media(max-width:500px){.rhi-zones{grid-template-columns:1fr}}
+/* IMAGES */
 .img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:1.5rem}
 .img-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
-.img-placeholder{height:140px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;background:rgba(15,30,53,.8);border-bottom:1px solid var(--border)}
+.img-ph{height:120px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;background:rgba(15,30,53,.8);border-bottom:1px solid var(--border)}
 .img-body{padding:1.2rem}
 .img-badge{display:inline-block;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:.25em .7em;border-radius:100px;margin-bottom:.6rem;font-weight:700}
 .badge-real{background:rgba(251,191,36,.15);color:var(--yellow);border:1px solid rgba(251,191,36,.3)}
-.badge-fake{background:rgba(248,113,113,.15);color:var(--red);border:1px solid rgba(248,113,113,.3)}
 .img-body h3{font-size:.95rem;margin-bottom:.4rem}
 .img-body p{font-size:.83rem}
+/* DELIVERY SECTION */
+.delivery-grid{display:grid;gap:1rem;margin-top:1.5rem}
+.delivery-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:start}
+.delivery-num{font-size:2rem;font-weight:800;color:rgba(96,165,250,.25);line-height:1;padding-top:.1rem}
+.delivery-content h3{font-size:1rem;margin-bottom:.4rem}
+.delivery-content p{font-size:.88rem}
+.particle-table{width:100%;border-collapse:collapse;margin:1.2rem 0;font-size:.85rem}
+.particle-table th{background:rgba(30,48,80,.6);color:var(--accent);padding:.6rem 1rem;text-align:left;font-size:.75rem;letter-spacing:.06em;text-transform:uppercase}
+.particle-table td{padding:.6rem 1rem;border-bottom:1px solid var(--border);color:#b8cadf}
+.particle-table tr:last-child td{border-bottom:none}
+.particle-table tr:hover td{background:rgba(30,48,80,.3)}
+.particle-table td:first-child{color:var(--accent);font-family:monospace}
+.dilution-box{background:linear-gradient(135deg,rgba(248,113,113,.06),rgba(248,113,113,.02));border:1px solid rgba(248,113,113,.2);border-radius:12px;padding:1.4rem;margin:1.2rem 0;text-align:center}
+.dilution-num{font-size:3rem;font-weight:800;color:var(--red);line-height:1;margin-bottom:.4rem}
+.dilution-label{font-size:.85rem;color:#b8cadf}
+.energy-bar{margin:1.2rem 0}
+.ebar-label{font-size:.8rem;color:var(--gray);margin-bottom:.4rem}
+.ebar-track{height:20px;background:var(--border);border-radius:100px;overflow:hidden;margin-bottom:.3rem}
+.ebar-fill{height:100%;border-radius:100px;transition:width 1s ease}
+.ebar-val{font-size:.75rem;color:var(--gray);text-align:right}
 </style>
 </head>
 <body>
 
 <nav>
-  <a href="#science">The Science</a>
-  <a href="#appleman">Appleman Equation</a>
+  <a href="#science">Science</a>
+  <a href="#appleman">Appleman Eq.</a>
+  <a href="#delivery">Delivery Problem</a>
   <a href="#images">Those Images</a>
   <a href="#claims">Claims vs Reality</a>
   <a href="#origin">Origin</a>
-  <a href="#consensus">Expert Consensus</a>
+  <a href="#consensus">Consensus</a>
   <a href="#psychology">Psychology</a>
   <a href="#geo">Real Geoengineering</a>
   <a href="#verdict">Verdict</a>
@@ -139,46 +156,47 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
 <section>
   <div class="stats">
     <div class="sc"><div class="snum">76/77</div><div class="slbl">Atmospheric scientists found zero evidence of spraying (2016 peer-reviewed survey)</div></div>
-    <div class="sc"><div class="snum">1953</div><div class="slbl">Year Appleman derived the thermodynamic equation that fully explains contrail behavior</div></div>
+    <div class="sc"><div class="snum">1953</div><div class="slbl">Year Appleman derived the equation that fully explains all contrail behavior</div></div>
+    <div class="sc"><div class="snum">10⁹×</div><div class="slbl">Typical dilution factor for substances released at cruise altitude by ground level</div></div>
     <div class="sc"><div class="snum">1996</div><div class="slbl">Year a misread USAF student paper triggered the entire conspiracy</div></div>
-    <div class="sc"><div class="snum">~17%</div><div class="slbl">People who believed it "partly true" in a 2011 international survey</div></div>
     <div class="sc"><div class="snum">WWII</div><div class="slbl">Era of earliest persistent contrail photographs — decades before the theory</div></div>
   </div>
 </section>
 
 <div class="divider"></div>
 
+<!-- SCIENCE -->
 <section id="science">
   <div class="sl">Atmospheric Physics</div>
   <h2>What contrails actually are</h2>
-  <p>Contrails — condensation trails — are not a modern mystery. They are a well-understood atmospheric phenomenon documented since the 1940s, governed by basic thermodynamics, and explained in aviation meteorology textbooks for decades.</p>
+  <p>Contrails are a well-understood atmospheric phenomenon documented since the 1940s, governed by basic thermodynamics, and explained in aviation meteorology textbooks for decades.</p>
   <div class="cg">
     <div class="card"><div class="ci">🌡️</div><h3>Formation mechanism</h3><p>Jet engines produce hot, humid exhaust. At cruising altitude (~35,000 ft), ambient temperatures hover around −50°C. Hot water vapor instantly condenses and freezes into ice crystals. Same physics as seeing your breath on a cold morning — just at 11,000 meters.</p></div>
-    <div class="card"><div class="ci">⏱️</div><h3>Why some persist and others don't</h3><p>Duration depends entirely on atmospheric humidity. In dry air, contrails vanish in seconds. In supersaturated air (RHi &gt; 100%), they persist for hours and spread into cirrus-like sheets. Physics, not chemistry. Fully described by the Appleman criterion (see below).</p></div>
-    <div class="card"><div class="ci">🌈</div><h3>Iridescent "rainbow" contrails</h3><p>Contrails sometimes shimmer with color when backlit by the sun. This is ice crystal light scattering — identical to the optics of halos and rainbow clouds. The German DLR Atmospheric Physics Department published a full predictive model. Standard optics. No extra chemicals.</p></div>
-    <div class="card"><div class="ci">✈️</div><h3>Why there are more trails now</h3><p>Global air traffic increased roughly 5–6× since the 1970s. More flights means more contrails. Climate change may also be increasing the frequency of supersaturated atmospheric conditions at altitude. Documented, measurable causes.</p></div>
-    <div class="card"><div class="ci">🔲</div><h3>Grid patterns in the sky</h3><p>The US National Airspace System uses fixed flight lanes arranged in a geometric grid. Aircraft on perpendicular routes at different times, in humid conditions, naturally produce crosshatch patterns. Air traffic control geometry — no coordination required.</p></div>
-    <div class="card"><div class="ci">🧪</div><h3>What's actually in jet exhaust</h3><p>Combustion produces water vapor, CO₂, nitrogen oxides, trace soot, and trace sulfur. The contrail is almost entirely ice. No barium, no aluminum salts, no biological agents — and no delivery mechanism capable of doing this at scale exists without global atmospheric detection.</p></div>
+    <div class="card"><div class="ci">⏱️</div><h3>Why some persist and others don't</h3><p>Duration depends entirely on atmospheric humidity. In dry air, contrails vanish in seconds. In supersaturated air (RHi &gt; 100%), they persist for hours and spread into cirrus-like sheets. Fully described by the Appleman criterion — no unknowns remain.</p></div>
+    <div class="card"><div class="ci">🌈</div><h3>Iridescent "rainbow" contrails</h3><p>Ice crystal light scattering — identical to the optics of halos and rainbow clouds. The German DLR Atmospheric Physics Department published a full predictive model. Standard optics. No extra chemicals.</p></div>
+    <div class="card"><div class="ci">✈️</div><h3>Why there are more trails now</h3><p>Global air traffic increased roughly 5–6× since the 1970s. More flights means more contrails. Climate change may also be increasing supersaturated atmospheric conditions at altitude. Documented, measurable causes.</p></div>
+    <div class="card"><div class="ci">🔲</div><h3>Grid patterns in the sky</h3><p>The US National Airspace System uses fixed flight lanes in a geometric grid. Aircraft on perpendicular routes at different times, in humid conditions, naturally produce crosshatch patterns. Air traffic control geometry.</p></div>
+    <div class="card"><div class="ci">🧪</div><h3>What's actually in jet exhaust</h3><p>Combustion produces water vapor, CO₂, nitrogen oxides, trace soot, and trace sulfur. The contrail is almost entirely ice. No barium, no aluminum salts, no biological agents — and no delivery mechanism for these exists at scale without global detection.</p></div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- APPLEMAN EQUATION -->
+<!-- APPLEMAN -->
 <section id="appleman">
   <div class="sl">Thermodynamics — Schmidt 1941 / Appleman 1953</div>
   <h2>The equation that explains everything</h2>
-  <p>The Schmidt-Appleman criterion is the thermodynamic model that predicts when a contrail forms and, crucially, whether it persists. It was derived in 1941 and refined by Herbert Appleman in 1953. It leaves no room for mystery — and no need for secret chemicals.</p>
+  <p>The Schmidt-Appleman criterion is the thermodynamic model that predicts when a contrail forms and whether it persists. Derived in 1941 and refined by Herbert Appleman in 1953. It leaves no room for mystery — and no need for secret chemicals.</p>
 
   <div class="eq-box">
-    <div class="eq-label">Formation condition</div>
-    <p style="color:#b8cadf;font-size:.9rem;margin-bottom:1rem">A contrail forms when the exhaust/air mixture reaches saturation with respect to ice. The slope of the mixing line in the (T, e) diagram must exceed the saturation curve:</p>
+    <div class="eq-label">Formation condition — mixing line slope</div>
+    <p style="color:#b8cadf;font-size:.9rem;margin-bottom:1rem">A contrail forms when the exhaust/air mixture crosses the ice saturation curve. The slope G of the mixing line in the temperature–vapour pressure diagram must exceed the local saturation curve slope:</p>
     <div id="eq1"></div>
     <div class="eq-params">
-      <div class="eq-param"><span class="eq-sym">G</span><span class="eq-desc">Slope of the mixing line in the temperature–vapour pressure diagram (Pa/K)</span></div>
+      <div class="eq-param"><span class="eq-sym">G</span><span class="eq-desc">Slope of the mixing line in the (T, e) diagram (Pa K⁻¹)</span></div>
       <div class="eq-param"><span class="eq-sym">EI<sub>H₂O</sub></span><span class="eq-desc">Water vapour emission index ≈ 1.25 kg per kg of fuel burned</span></div>
       <div class="eq-param"><span class="eq-sym">c<sub>p</sub></span><span class="eq-desc">Specific heat of air at constant pressure ≈ 1004 J kg⁻¹ K⁻¹</span></div>
-      <div class="eq-param"><span class="eq-sym">p</span><span class="eq-desc">Ambient atmospheric pressure (Pa) — typically ~23,000 Pa at cruise altitude</span></div>
+      <div class="eq-param"><span class="eq-sym">p</span><span class="eq-desc">Ambient atmospheric pressure (Pa) — ~23,000 Pa at cruise altitude</span></div>
       <div class="eq-param"><span class="eq-sym">ε</span><span class="eq-desc">Ratio of molar masses of water and dry air = 0.622</span></div>
       <div class="eq-param"><span class="eq-sym">Q</span><span class="eq-desc">Specific combustion heat of kerosene ≈ 43.2 MJ kg⁻¹</span></div>
       <div class="eq-param"><span class="eq-sym">η</span><span class="eq-desc">Overall propulsion efficiency of the engine ≈ 0.30–0.40</span></div>
@@ -187,7 +205,7 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
 
   <div class="eq-box">
     <div class="eq-label">Persistence condition — the key variable</div>
-    <p style="color:#b8cadf;font-size:.9rem;margin-bottom:1rem">Whether the contrail <em>persists</em> depends entirely on the relative humidity of the surrounding air with respect to ice (RHi). This single variable explains all observed variation in contrail duration — with no chemical additives required:</p>
+    <p style="color:#b8cadf;font-size:.9rem;margin-bottom:1rem">Whether the contrail <em>persists</em> depends entirely on the relative humidity of the surrounding air with respect to ice (RHi). This single atmospheric variable explains all observed variation in contrail duration:</p>
     <div id="eq2"></div>
     <div class="eq-params">
       <div class="eq-param"><span class="eq-sym">RHi</span><span class="eq-desc">Relative humidity with respect to ice (%). The only variable determining persistence.</span></div>
@@ -197,223 +215,63 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
   </div>
 
   <div class="rhi-bar">
-    <div class="rhi-title">The RHi spectrum — what it produces</div>
+    <div style="font-size:.8rem;font-weight:600;color:var(--white);margin-bottom:.3rem">The RHi spectrum — what it produces</div>
     <div class="rhi-track"><div class="rhi-marker"></div></div>
     <div class="rhi-labels"><span>RHi = 0%</span><span>RHi = 100%</span><span>RHi = 150%+</span></div>
     <div class="rhi-zones">
-      <div class="rhi-zone dry"><strong style="color:var(--red)">RHi &lt; 100% — Subsaturated</strong>Contrail forms briefly then sublimes. Disappears in seconds to minutes. This is what "normal" looks like on dry days.</div>
-      <div class="rhi-zone wet"><strong style="color:var(--green)">RHi &gt; 100% — Supersaturated</strong>Contrail persists and grows. Ice crystals attract more water vapor. Can last hours, spread kilometers, and become indistinguishable from natural cirrus clouds.</div>
+      <div class="rhi-zone dry"><strong style="color:var(--red)">RHi &lt; 100% — Subsaturated</strong>Contrail forms briefly then sublimes. Disappears in seconds to minutes. The "normal" appearance on dry days.</div>
+      <div class="rhi-zone wet"><strong style="color:var(--green)">RHi &gt; 100% — Supersaturated</strong>Contrail persists and grows. Ice crystals attract more water vapor. Can last hours, spread kilometers, become indistinguishable from natural cirrus.</div>
     </div>
   </div>
 
   <div class="ib">
-    <div class="ibl">⚡ Why this matters for the conspiracy theory</div>
-    <p>The single most common "evidence" for chemtrails is "this contrail lasted too long." The Appleman equation shows that persistence is <strong style="color:var(--white)">fully determined by local atmospheric humidity at altitude</strong> — a variable that changes by the hour, is invisible from the ground, and varies independently of aircraft type, fuel, route, or any other factor. No secret chemical is needed. No anomaly exists. The equation has been validated thousands of times across military and civilian aviation meteorology for 70 years.</p>
+    <div class="ibl">⚡ Why this closes the argument</div>
+    <p>The most common "evidence" for chemtrails is "this contrail lasted too long." The Appleman equation shows persistence is <strong>fully determined by local atmospheric humidity at altitude</strong> — a variable that changes by the hour, is invisible from the ground, and varies independently of aircraft type, fuel, or route. No secret chemical needed. No anomaly exists. The equation has been validated across military and civilian aviation meteorology for over 70 years.</p>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- IMAGE EXPLANATIONS -->
-<section id="images">
-  <div class="sl">Viral "Evidence" Analysed</div>
-  <h2>Those images — what they actually show</h2>
-  <p>Three images and videos circulate widely as "definitive proof" of chemtrail spraying equipment. Here is what they actually document, with sourcing.</p>
+<!-- DELIVERY PROBLEM -->
+<section id="delivery">
+  <div class="sl">Engineering Analysis</div>
+  <h2>The delivery problem — why it doesn't work</h2>
+  <p>Even setting aside all the evidence above, the chemtrail theory fails on basic engineering grounds. High-altitude aircraft are perhaps the worst conceivable delivery mechanism for any substance intended to affect a ground-level population. Here is why, systematically.</p>
 
-  <div class="img-grid">
-    <div class="img-card">
-      <div class="img-placeholder">🎛️</div>
-      <div class="img-body">
-        <span class="img-badge badge-real">Real device — misidentified</span>
-        <h3>"So I flip this" — cockpit panel</h3>
-        <p>This is a control panel from a <strong>cloud seeding aircraft</strong> — a small, specialised plane contracted by water authorities or agricultural agencies to induce rainfall using silver iodide flares. The video is from a commercial weather modification company. It has nothing to do with commercial aviation. Cloud seeding is legal, public, and documented. The "FIRE" label refers to pyrotechnic flare ignition — standard in cloud seeding rigs.</p>
+  <div class="delivery-grid">
+
+    <div class="delivery-card">
+      <div class="delivery-num">01</div>
+      <div class="delivery-content">
+        <h3>Atmospheric dispersion — the dilution is catastrophic</h3>
+        <p>Any substance released at cruise altitude (~10,000m) immediately encounters wind shear, turbulent wake diffusion, and continuous tropospheric convection. Using standard Gaussian atmospheric dispersion modelling, a substance released at 10km altitude reaches ground level diluted by a factor of:</p>
+        <div class="dilution-box">
+          <div class="dilution-num">10⁸ – 10¹⁰</div>
+          <div class="dilution-label">That is 100 million to 10 billion times diluted before reaching ground level.<br>At this concentration, virtually any known substance — toxic or otherwise — is completely inert.</div>
+        </div>
+        <p>To deliver a biologically meaningful dose at ground level you would need to release <strong>industrial quantities continuously</strong> — quantities detectable by any atmospheric chemistry monitoring station on Earth, of which there are hundreds operated by independent agencies worldwide.</p>
       </div>
     </div>
-    <div class="img-card">
-      <div class="img-placeholder">🧪</div>
-      <div class="img-body">
-        <span class="img-badge badge-real">Real device — misidentified</span>
-        <h3>Tubes mounted on aircraft wing/rack</h3>
-        <p>These are <strong>silver iodide (AgI) flare racks</strong> fitted to a cloud seeding aircraft — not a commercial airliner. The colour-coded labels identify chemical composition of each cartridge. They are fired into the base of clouds to seed ice crystal nucleation and trigger precipitation. The equipment is certified, inspected, and operated under meteorological permits. Visible on aircraft like the Beechcraft King Air used by many weather modification operators globally.</p>
+
+    <div class="delivery-card">
+      <div class="delivery-num">02</div>
+      <div class="delivery-content">
+        <h3>Particle size physics — payload vs. suspension are mutually exclusive</h3>
+        <p>For a particle to stay aloft long enough to drift to ground level, it must be extremely fine. But fine particles carry negligible chemical payload. The two requirements are physically incompatible at scale:</p>
+        <table class="particle-table">
+          <tr><th>Particle size</th><th>Settling velocity</th><th>Time to fall 10 km</th><th>Payload capacity</th></tr>
+          <tr><td>0.1 µm</td><td>0.000003 m/s</td><td>~3,800 days</td><td>Negligible</td></tr>
+          <tr><td>1 µm</td><td>0.00003 m/s</td><td>~385 days</td><td>Negligible</td></tr>
+          <tr><td>10 µm</td><td>0.003 m/s</td><td>~38 days</td><td>Very low</td></tr>
+          <tr><td>100 µm</td><td>0.25 m/s</td><td>~11 hours</td><td>Low</td></tr>
+          <tr><td>1000 µm</td><td>~4 m/s</td><td>~41 minutes</td><td>Meaningful</td></tr>
+        </table>
+        <p>Particles large enough to carry a meaningful dose fall rapidly and concentrate near the release point. Particles small enough to drift continent-wide carry essentially nothing. There is no particle size that satisfies both requirements simultaneously.</p>
       </div>
     </div>
-    <div class="img-card">
-      <div class="img-placeholder">🔥</div>
-      <div class="img-body">
-        <span class="img-badge badge-real">Real — but not what it claims</span>
-        <h3>"They contain potassium chloride, sodium chloride"</h3>
-        <p>The text overlay is accurate — those are real compounds in cloud seeding flares. <strong>Potassium chloride and sodium chloride are table salt equivalents</strong> — completely non-toxic, used as ice nucleating agents to promote ice crystal formation in supercooled clouds. The glowing tips are the flares igniting. This is not a chemtrail device. It is the opposite of a secret: these compounds are published in every cloud seeding operational permit. The aircraft in the image is not a commercial passenger jet.</p>
-      </div>
-    </div>
-  </div>
 
-  <div class="cb" style="margin-top:1.5rem">
-    <div class="ch">
-      <div class="cc cl">
-        <div class="ccl">⚠ What the theory claims</div>
-        <p>These images prove commercial airliners are secretly fitted with chemical spraying devices delivering toxic compounds to the population without consent.</p>
-      </div>
-      <div class="cc cr">
-        <div class="ccl">✓ What the evidence shows</div>
-        <p>The images show <strong>cloud seeding equipment</strong> on <strong>dedicated weather modification aircraft</strong> — a completely separate, public, regulated technology. Cloud seeding operators publish their flight plans, chemical manifests, and operational permits. The compounds shown (KCl, NaCl) are food-grade salts. No commercial airliner has ever been certified with this equipment.</p>
-      </div>
-    </div>
-  </div>
-
-  <div class="ib" style="margin-top:1rem">
-    <div class="ibl">⚠ The conflation problem</div>
-    <p>Cloud seeding <strong>is real</strong>. It involves aircraft. It involves chemicals. This makes it a perfect raw material for conspiracy theory — it sounds like what chemtrails describe. But it is a distinct technology, operated by different aircraft, with different compounds, under public regulation, producing no persistent trails. Using cloud seeding as evidence for chemtrails is like using ambulances as evidence for secret organ harvesting — both involve medicine, neither is evidence of the other.</p>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section id="claims">
-  <div class="sl">Point by Point</div>
-  <h2>Common claims vs. what evidence shows</h2>
-
-  <div class="cb"><div class="ch">
-    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Normal contrails disappear quickly. Long-lasting ones prove added chemicals."</p></div>
-    <div class="cc cr"><div class="ccl">✓ Reality</div><p>Persistence is entirely determined by RHi — atmospheric humidity relative to ice. Both short and long contrails are pure ice. The Appleman equation (1953) predicts this with full accuracy. No mystery. No chemicals required.</p></div>
-  </div></div>
-
-  <div class="cb"><div class="ch">
-    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Soil and water tests show elevated barium and aluminum — proof of spraying."</p></div>
-    <div class="cc cr"><div class="ccl">✓ Reality</div><p>Both elements occur naturally in soil and water. The sampling methods used — metal-lidded Mason jars, no acid wash — heavily contaminate results. Atmospheric chemists called it "the worst protocol imaginable." Results described as "totally worthless."</p></div>
-  </div></div>
-
-  <div class="cb"><div class="ch">
-    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Photos show nozzles and spray equipment on commercial aircraft."</p></div>
-    <div class="cc cr"><div class="ccl">✓ Reality</div><p>The images show cloud seeding flare racks on dedicated weather modification aircraft — not commercial airliners. Cloud seeding is publicly documented, legally operated, and uses non-toxic compounds. See the full image analysis above.</p></div>
-  </div></div>
-
-  <div class="cb"><div class="ch">
-    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"The 1996 USAF paper 'Weather as a Force Multiplier' proves this is real."</p></div>
-    <div class="cc cr"><div class="ccl">✓ Reality</div><p>It was a student exercise in speculative scenario planning, explicitly labeled "fictional representations of future situations." Not a program, not a budget, not operational. The Air Force confirmed this repeatedly. This misreading is the founding error of the entire conspiracy.</p></div>
-  </div></div>
-
-  <div class="cb"><div class="ch">
-    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Scientists and governments deny it — which proves the cover-up."</p></div>
-    <div class="cc cr"><div class="ccl">✓ Reality</div><p>This is structurally nonfalsifiable: evidence against the theory becomes evidence for it. Psychologist Rob Brotherton calls this "heads I win, tails you lose." A theory that cannot be disproved by any evidence is not a scientific theory.</p></div>
-  </div></div>
-
-  <div class="cb"><div class="ch">
-    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"How could thousands of people stay silent about a program this large?"</p></div>
-    <div class="cc cr"><div class="ccl">✓ Reality</div><p>Exactly. A global commercial aviation spraying program requires tens of thousands of silent participants — all poisoning their own families — with zero credible leaks in 30 years. Astronomer Bob Berman: "40,000 pilots to be in on the plot to poison their own children."</p></div>
-  </div></div>
-</section>
-
-<div class="divider"></div>
-
-<section id="origin">
-  <div class="sl">History</div>
-  <h2>How the theory was born and spread</h2>
-  <div class="tl">
-    <div class="ti"><div class="td">1940s</div><div class="tc"><div class="ty">World War II</div><h3>Persistent contrails documented</h3><p>WWII photographs show long-lasting contrails from Allied bomber formations — decades before any supposed chemtrail program. Alone refutes the claim that persistent trails are a modern anomaly.</p></div></div>
-    <div class="ti"><div class="td">1953</div><div class="tc"><div class="ty">Appleman Criterion</div><h3>Thermodynamic model fully explains contrail persistence</h3><p>Herbert Appleman publishes the definitive criterion for contrail formation and persistence. The equation accounts for all observed behavior — including long-lasting spreading trails — using only atmospheric temperature and humidity. No unknowns remain.</p></div></div>
-    <div class="ti"><div class="td">1996</div><div class="tc"><div class="ty">The Origin Error</div><h3>A misread USAF paper triggers everything</h3><p>A student fictional scenario paper is misread by internet forums as proof of active weather warfare. The USAF later formally called the resulting conspiracy theory "a hoax."</p></div></div>
-    <div class="ti"><div class="td">2000</div><div class="tc"><div class="ty">Federal Response</div><h3>Four agencies publish a joint fact sheet</h3><p>EPA, FAA, NASA, and NOAA jointly explain contrail science. Many believers interpret the coordinated response as further evidence of cover-up — illustrating the theory's nonfalsifiable structure.</p></div></div>
-    <div class="ti"><div class="td">2016</div><div class="tc"><div class="ty">First Peer-Reviewed Study</div><h3>UC Irvine and Carnegie survey 77 experts</h3><p>Published in Environmental Research Letters. 76 of 77 atmospheric scientists report zero evidence of a secret spraying program. Consensus: 98.7%.</p></div></div>
-    <div class="ti"><div class="td">2020s</div><div class="tc"><div class="ty">Political Mainstreaming</div><h3>The theory enters mainstream politics</h3><p>Tucker Carlson interviews prominent advocates. Multiple US states introduce anti-geoengineering bills. The theory evolves to borrow credibility from legitimate climate science debates, blurring the line between research and conspiracy.</p></div></div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section id="consensus">
-  <div class="sl">Scientific Record</div>
-  <h2>What the experts actually say</h2>
-  <div class="qb"><p>"We wanted to establish a scientific record on the topic for the benefit of those in the public who haven't made up their minds. The experts we surveyed resoundingly rejected contrail photographs and test results as evidence of a large-scale atmospheric conspiracy."</p><div class="qs">— Steven Davis, UC Irvine, lead author, Environmental Research Letters, 2016</div></div>
-  <div class="qb"><p>"If you try to pin these people down and refute things, it's: 'Well, you're just part of the conspiracy.'"</p><div class="qs">— Patrick Minnis, atmospheric scientist, NASA Langley Research Center</div></div>
-  <div class="qb"><p>"There is no such thing as a 'Chemtrail'. Contrails are safe and are a natural phenomenon. They pose no health hazard of any kind."</p><div class="qs">— US Air Force official fact sheet, 2005</div></div>
-  <p>Institutions with formal published denials: <strong>US EPA, FAA, NASA, NOAA, US Air Force, Royal Aeronautical Society, UK Department for Environment, Government of Canada.</strong></p>
-</section>
-
-<div class="divider"></div>
-
-<section id="psychology">
-  <div class="sl">Cognitive Science</div>
-  <h2>Why people believe it anyway</h2>
-  <p>The persistence of chemtrail belief is not a sign of stupidity. It's the result of predictable cognitive mechanisms, social dynamics, and real — if misdirected — anxieties. Understanding this matters more than ridicule.</p>
-  <div class="fl">
-    <div class="fi"><div class="fn">01</div><div class="fc"><h3>Apophenia — pattern recognition misfiring</h3><p>Human brains are wired to find patterns. This is adaptive — it's how we survived. But it also makes us see coordinated plots in crossed contrail lines. Normal pattern-finding applied to the wrong domain.</p></div></div>
-    <div class="fi"><div class="fn">02</div><div class="fc"><h3>Loss of control — need for a comprehensible enemy</h3><p>Research consistently links conspiracy belief to a reduced sense of personal control. A world with secret spraying is terrifying — but it has an identifiable enemy and a chance to resist. Randomness and systemic complexity are psychologically harder to sit with.</p></div></div>
-    <div class="fi"><div class="fn">03</div><div class="fc"><h3>Confirmation bias</h3><p>Once someone believes in chemtrails, every persistent contrail is evidence, every denial is a cover-up, every skeptic is paid off. The belief becomes its own filter. Universal human cognition — the difference is only the object it latches onto.</p></div></div>
-    <div class="fi"><div class="fn">04</div><div class="fc"><h3>Institutional distrust with a legitimate root</h3><p>Fear of institutional betrayal has real foundations: surveillance capitalism, data exploitation, regulatory capture, documented historical deception (MKULTRA, Tuskegee). Some institutional distrust is warranted. The problem is when it attaches to a specific false theory.</p></div></div>
-    <div class="fi"><div class="fn">05</div><div class="fc"><h3>Community and identity — the "conversion" experience</h3><p>Many believers describe adopting the theory as quasi-religious — a "waking up." Leaving the belief means losing community. The social cost of changing your mind is often higher than the epistemic cost of maintaining the belief.</p></div></div>
-    <div class="fi"><div class="fn">06</div><div class="fc"><h3>Grief and illness attribution</h3><p>Some believers adopted the theory after health crises or losing loved ones. "Chemtrails" offers a cause and something to fight. This is a profoundly human response to suffering. You cannot fact-check someone out of a coping mechanism.</p></div></div>
-    <div class="fi"><div class="fn">07</div><div class="fc"><h3>Nonfalsifiability as structural protection</h3><p>The theory cannot be disproved. Every counterargument becomes evidence of the conspiracy. Real scientific theories must be falsifiable — this one is not. That structural immunity is what makes it intellectually bulletproof and scientifically useless simultaneously.</p></div></div>
-  </div>
-  <div class="qb" style="margin-top:2rem"><p>"On some level, chemtrail theorists would rather be targets of an evil conspiracy than face the limits of their knowledge and power."</p><div class="qs">— Calum Lister Matheson, communications researcher, The Conversation, 2025</div></div>
-</section>
-
-<div class="divider"></div>
-
-<section id="geo">
-  <div class="sl">What Actually Exists</div>
-  <h2>Real geoengineering — and why it is different</h2>
-  <div class="ib"><div class="ibl">⚠ Important distinction</div><p>Geoengineering research is real, open, and actively debated. It is not the same as the chemtrails conspiracy. Conflating the two is one of the main mechanisms by which the theory borrows credibility from legitimate science.</p></div>
-  <div class="cg">
-    <div class="card"><div class="ci">☁️</div><h3>Cloud seeding</h3><p>Practiced openly since the 1940s. Uses small dedicated aircraft with public permits. Compounds (AgI, KCl, NaCl) are published in operational filings. Does not produce persistent contrail-like trails. Not secret, not sinister — and not the same as chemtrails.</p></div>
-    <div class="card"><div class="ci">☀️</div><h3>Stratospheric aerosol injection (SAI)</h3><p>A proposed — not deployed — climate intervention to reflect sunlight. Studied openly at Harvard, Oxford, and others. All publications are public. None of this involves commercial aircraft contrails. None of it is covert.</p></div>
-    <div class="card"><div class="ci">🔬</div><h3>The critical distinction</h3><p>A covert global spraying program via commercial aviation would produce measurable chemical signatures across hundreds of independent atmospheric monitoring networks worldwide — including those operated by countries with every reason to expose it. None have been detected.</p></div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section id="verdict">
-  <div class="vbox">
-    <div class="sl" style="justify-content:center">Scientific Conclusion</div>
-    <h2>The verdict is unambiguous</h2>
-    <p>The Appleman equation (1953) fully accounts for all observed contrail behavior using only temperature and atmospheric humidity. The peer-reviewed scientific consensus (98.7%, 2016) finds no evidence of secret spraying. The viral "proof" images document cloud seeding aircraft — a distinct, public, regulated technology. The conspiracy theory's structure is nonfalsifiable by design.</p>
-    <p>What exists are contrails — ice crystals governed by well-understood physics. What also exists is legitimate debate about aviation emissions, climate change, and the ethics of geoengineering research. These deserve serious engagement — rigorously separated from this conspiracy.</p>
-    <div class="pills">
-      <span class="pill">Appleman (1953) explains all contrail behavior</span>
-      <span class="pill">98.7% expert consensus against</span>
-      <span class="pill">Viral images = cloud seeding aircraft</span>
-      <span class="pill">Origin: misread 1996 student paper</span>
-      <span class="pill">Sampling methods were contaminated</span>
-      <span class="pill">Theory is structurally nonfalsifiable</span>
-      <span class="pill">WWII contrail photos predate the theory</span>
-      <span class="pill">4 federal agencies formally denied it</span>
-    </div>
-  </div>
-</section>
-
-<section>
-  <div class="sl">References</div>
-  <h2>Sources</h2>
-  <div class="srcg">
-    <div class="si"><div class="sn2">Appleman, H.S. (1953)</div><div class="st">USAF: "A meteorological analysis of jet aircraft condensation trail formation." The foundational thermodynamic criterion.</div></div>
-    <div class="si"><div class="sn2">Environmental Research Letters (2016)</div><div class="st">UC Irvine / Carnegie / Near Zero — survey of 77 atmospheric scientists. First peer-reviewed study on chemtrail claims.</div></div>
-    <div class="si"><div class="sn2">Royal Aeronautical Society</div><div class="st">Dr. Ron Smith FRAeS — contrail formation mechanics and iridescent trail optics.</div></div>
-    <div class="si"><div class="sn2">EPA / FAA / NASA / NOAA</div><div class="st">Joint fact sheet (2000) and EPA updated notice (2015).</div></div>
-    <div class="si"><div class="sn2">USAF Fact Sheet (2005)</div><div class="st">Formally labeled chemtrail theory "a hoax." Clarified the fictional nature of the 1996 paper.</div></div>
-    <div class="si"><div class="sn2">Salata Institute, Harvard (2025)</div><div class="st">Analysis of chemtrails community dynamics and intervention strategies.</div></div>
-    <div class="si"><div class="sn2">ACM CSCW Study (2021)</div><div class="st">In-depth interviews with 13 believers and 7 ex-believers on internet sensemaking.</div></div>
-    <div class="si"><div class="sn2">The Conversation (2025)</div><div class="st">Calum Lister Matheson — why the conspiracy persists and grows.</div></div>
-  </div>
-</section>
-
-<footer>Built from publicly available scientific literature and peer-reviewed research. No institutional affiliation. No agenda beyond accuracy. March 2026.</footer>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.js"></script>
-<script>
-// Render equations
-katex.render("G = \\frac{EI_{H_2O} \\cdot c_p \\cdot p}{\\varepsilon \\cdot Q(1-\\eta)}", document.getElementById('eq1'), {displayMode:true, throwOnError:false});
-katex.render("RHi = \\frac{e}{e_{s,i}(T)} \\times 100\\%", document.getElementById('eq2'), {displayMode:true, throwOnError:false});
-
-// Contrail hero animation
-(function(){
-  var cb=document.getElementById('cbg');
-  [{top:'12%',left:'-5%',w:'65%',rot:'-2deg',delay:'0s'},{top:'25%',left:'15%',w:'75%',rot:'1deg',delay:'3.5s'},{top:'40%',left:'-8%',w:'58%',rot:'-1.5deg',delay:'7s'},{top:'53%',left:'25%',w:'70%',rot:'2deg',delay:'1.5s'},{top:'65%',left:'5%',w:'60%',rot:'-0.5deg',delay:'5s'}].forEach(function(c){
-    var el=document.createElement('div');
-    el.className='cline';
-    el.style.cssText='top:'+c.top+';left:'+c.left+';--w:'+c.w+';transform:rotate('+c.rot+');transform-origin:left center;background:linear-gradient(to right,transparent,rgba(180,210,255,0.4),transparent);animation-delay:'+c.delay+';animation-duration:'+(10+Math.random()*5).toFixed(1)+'s;';
-    cb.appendChild(el);
-  });
-})();
-</script>
-</body>
-</html>
+    <div class="delivery-card">
+      <div class="delivery-num">03</div>
+      <div class="delivery-content">
+        <h3>Targeting is essentially impossible</h3>
+        <p>High-altitude wind patterns are variable by altitude, season, latitude, and hour. The jet stream — the dominant flow at cruise altitude — routinely moves at 150–300 km/h and shifts direction unpredictably. Any substanc
