@@ -6,12 +6,16 @@
 <title>Chemtrails — The Complete Picture</title>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css">
 <style>
-:root{--sky:#0a0f1e;--white:#f0f4ff;--gray:#8a9bb8;--accent:#60a5fa;--red:#f87171;--green:#4ade80;--yellow:#fbbf24;--orange:#fb923c;--card:#0f1e35;--border:#1e3050;--font:'Segoe UI',system-ui,sans-serif}
+:root{--sky:#0a0f1e;--white:#f0f4ff;--gray:#8a9bb8;--accent:#60a5fa;--accent2:#a78bfa;--red:#f87171;--green:#4ade80;--yellow:#fbbf24;--orange:#fb923c;--pink:#f472b6;--card:#0f1e35;--border:#1e3050;--font:'Segoe UI',system-ui,sans-serif}
 *{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
 body{background:var(--sky);color:var(--white);font-family:var(--font);line-height:1.7;font-size:16px}
 nav{position:sticky;top:0;z-index:100;background:rgba(10,15,30,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 1.5rem;display:flex;overflow-x:auto}
-nav a{color:var(--gray);text-decoration:none;font-size:.75rem;letter-spacing:.04em;padding:.9rem .75rem;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s}
+nav a{color:var(--gray);text-decoration:none;font-size:.73rem;letter-spacing:.04em;padding:.9rem .7rem;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s}
 nav a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+nav a.addon{color:var(--accent2)}
+nav a.addon:hover{border-bottom-color:var(--accent2)}
+
+/* HERO */
 .hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;padding:4rem 2rem;background:radial-gradient(ellipse at 50% 30%,#0d1f3c 0%,#0a0f1e 70%)}
 .cbg{position:absolute;inset:0;pointer-events:none}
 .cline{position:absolute;height:2px;border-radius:2px;opacity:0;animation:fly 14s ease-in-out infinite}
@@ -24,22 +28,31 @@ nav a:hover{color:var(--accent);border-bottom-color:var(--accent)}
 .vbanner{display:inline-flex;align-items:center;gap:.6rem;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.4);border-radius:8px;padding:.8rem 1.4rem;font-size:.9rem;color:var(--green);font-weight:600}
 .dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
 @keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+
+/* LAYOUT */
 section{max-width:900px;margin:0 auto;padding:5rem 2rem}
 .divider{max-width:900px;margin:0 auto;border-top:1px solid var(--border)}
 .sl{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
 .sl::after{content:'';flex:1;max-width:40px;height:1px;background:var(--accent);opacity:.4}
+.sl.purple{color:var(--accent2)}
+.sl.purple::after{background:var(--accent2)}
 h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;line-height:1.2;margin-bottom:1.5rem;letter-spacing:-.01em}
 h3{font-size:1.05rem;font-weight:600;margin-bottom:.5rem}
 p{color:#b8cadf;margin-bottom:1rem}p:last-child{margin-bottom:0}
 strong{color:var(--white)}
+
+/* STATS */
 .stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:1rem;margin:2rem 0}
 .sc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem;text-align:center}
 .snum{font-size:2rem;font-weight:800;color:var(--accent);line-height:1;margin-bottom:.3rem}
 .slbl{font-size:.78rem;color:var(--gray)}
+
+/* CARDS */
 .cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1rem;margin-top:1.5rem}
 .card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;transition:border-color .2s}
-.card:hover{border-color:#3b82f6}
-.ci{font-size:1.6rem;margin-bottom:.8rem}
+.card:hover{border-color:#3b82f6}.ci{font-size:1.6rem;margin-bottom:.8rem}
+
+/* CLAIM BLOCKS */
 .cb{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:1rem}
 .ch{display:grid;grid-template-columns:1fr 1fr}
 .cc{padding:1rem 1.2rem}
@@ -48,6 +61,9 @@ strong{color:var(--white)}
 .ccl{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem;font-weight:700}
 .cc.cl .ccl{color:var(--red)}.cc.cr .ccl{color:var(--green)}
 .cc p{font-size:.88rem;margin:0}
+@media(max-width:600px){.ch{grid-template-columns:1fr}.cc.cl{border-right:none;border-bottom:1px solid var(--border)}}
+
+/* TIMELINE */
 .tl{margin-top:1.5rem}
 .ti{display:flex;gap:1.2rem;padding-bottom:1.8rem;position:relative}
 .ti::before{content:'';position:absolute;left:19px;top:28px;bottom:0;width:1px;background:var(--border)}
@@ -55,15 +71,23 @@ strong{color:var(--white)}
 .td{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--card);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.58rem;font-weight:700;color:var(--accent);text-align:center;line-height:1.1}
 .tc{padding-top:.5rem}
 .ty{font-size:.7rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.2rem}
+
+/* QUOTES */
 .qb{border-left:3px solid var(--accent);padding:1rem 1.5rem;background:rgba(59,130,246,.05);border-radius:0 8px 8px 0;margin:1.5rem 0}
+.qb.purple{border-left-color:var(--accent2);background:rgba(167,139,250,.05)}
 .qb p{font-style:italic;color:var(--white)}
 .qs{font-size:.8rem;color:var(--gray);margin-top:.4rem}
+
+/* FACTOR LIST */
 .fl{margin-top:1.2rem}
 .fi{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border)}
 .fi:last-child{border-bottom:none}
 .fn{flex-shrink:0;font-size:.7rem;font-weight:800;color:var(--accent);padding-top:.1rem;min-width:24px}
+.fn.purple{color:var(--accent2)}
 .fc h3{margin-bottom:.3rem;font-size:1rem}
 .fc p{font-size:.88rem}
+
+/* INFO BOXES */
 .ib{background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.25);border-radius:12px;padding:1.4rem;margin:1.5rem 0}
 .ibl{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);font-weight:700;margin-bottom:.5rem}
 .ib p{color:#d4b896}
@@ -73,17 +97,23 @@ strong{color:var(--white)}
 .gb{background:rgba(74,222,128,.05);border:1px solid rgba(74,222,128,.2);border-radius:12px;padding:1.4rem;margin:1.5rem 0}
 .gbl{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--green);font-weight:700;margin-bottom:.5rem}
 .gb p{color:#b8d4c0}
+.pb{background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.25);border-radius:12px;padding:1.4rem;margin:1.5rem 0}
+.pbl{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:700;margin-bottom:.5rem}
+.pb p{color:#c8b8e0}
+
+/* VERDICT */
 .vbox{background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(74,222,128,.05));border:1px solid rgba(59,130,246,.2);border-radius:16px;padding:2.5rem;text-align:center;margin:2rem 0}
 .vbox h2{margin-bottom:1rem}
 .vbox p{max-width:600px;margin:0 auto 1rem}
 .pills{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.5rem}
 .pill{background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.3);color:var(--green);padding:.4em 1em;border-radius:100px;font-size:.82rem;font-weight:600}
+
+/* SOURCES */
 .srcg{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:.8rem;margin-top:1rem}
 .si{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:.8rem 1rem;font-size:.82rem}
 .sn2{color:var(--white);font-weight:600;margin-bottom:.2rem}
 .st{color:var(--gray);font-size:.75rem}
-footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-size:.8rem;color:var(--gray)}
-@media(max-width:600px){.ch{grid-template-columns:1fr}.cc.cl{border-right:none;border-bottom:1px solid var(--border)}}
+
 /* EQ */
 .eq-box{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.8rem;margin:1.5rem 0;overflow-x:auto}
 .eq-label{font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:.8rem;font-weight:700}
@@ -103,15 +133,7 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
 .rhi-zone.wet{background:rgba(74,222,128,.08);border:1px solid rgba(74,222,128,.2)}
 .rhi-zone strong{display:block;margin-bottom:.3rem;font-size:.8rem}
 @media(max-width:500px){.rhi-zones{grid-template-columns:1fr}}
-/* IMAGES */
-.img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:1.5rem}
-.img-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
-.img-ph{height:120px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;background:rgba(15,30,53,.8);border-bottom:1px solid var(--border)}
-.img-body{padding:1.2rem}
-.img-badge{display:inline-block;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:.25em .7em;border-radius:100px;margin-bottom:.6rem;font-weight:700}
-.badge-real{background:rgba(251,191,36,.15);color:var(--yellow);border:1px solid rgba(251,191,36,.3)}
-.img-body h3{font-size:.95rem;margin-bottom:.4rem}
-.img-body p{font-size:.83rem}
+
 /* DELIVERY */
 .delivery-grid{display:grid;gap:1rem;margin-top:1.5rem}
 .delivery-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;display:grid;grid-template-columns:auto 1fr;gap:1.2rem;align-items:start}
@@ -127,17 +149,19 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
 .dilution-box{background:linear-gradient(135deg,rgba(248,113,113,.06),rgba(248,113,113,.02));border:1px solid rgba(248,113,113,.2);border-radius:12px;padding:1.4rem;margin:1.2rem 0;text-align:center}
 .dilution-num{font-size:3rem;font-weight:800;color:var(--red);line-height:1;margin-bottom:.4rem}
 .dilution-label{font-size:.85rem;color:#b8cadf}
+
 /* IF IT WERE REAL */
 .anomaly-grid{display:grid;gap:.8rem;margin-top:1.5rem}
 .anomaly-row{background:var(--card);border:1px solid var(--border);border-radius:10px;overflow:hidden;display:grid;grid-template-columns:1fr auto}
 .anomaly-body{padding:1rem 1.2rem}
 .anomaly-body h3{font-size:.95rem;margin-bottom:.3rem}
 .anomaly-body p{font-size:.85rem;margin:0}
-.anomaly-status{display:flex;align-items:center;justify-content:center;padding:1rem 1.4rem;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;min-width:100px;text-align:center;border-left:1px solid var(--border)}
+.anomaly-status{display:flex;align-items:center;justify-content:center;padding:1rem 1.4rem;font-size:.7rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;min-width:110px;text-align:center;border-left:1px solid var(--border)}
 .status-none{background:rgba(74,222,128,.08);color:var(--green)}
 .status-none::before{content:'✓ NOT FOUND'}
 @media(max-width:520px){.anomaly-row{grid-template-columns:1fr}.anomaly-status{border-left:none;border-top:1px solid var(--border);padding:.6rem}}
-/* EPISTEMIC DIAGRAM */
+
+/* EPISTEMIC */
 .epistem-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin:1.5rem 0}
 .epistem-box{border-radius:12px;padding:1.4rem}
 .epistem-box.conspiracy{background:rgba(248,113,113,.06);border:1px solid rgba(248,113,113,.2)}
@@ -152,18 +176,93 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
 .enode.e-good{background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.2);color:#86efac}
 .earrow{text-align:center;font-size:.9rem;color:var(--gray);line-height:1}
 @media(max-width:500px){.epistem-grid{grid-template-columns:1fr}}
-/* REAL LIES */
+
+/* LIES */
 .lies-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1.5rem}
 .lie-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem}
 .lie-card h3{font-size:.95rem;margin-bottom:.4rem}
 .lie-card p{font-size:.83rem}
 .lie-diff{margin-top:.8rem;padding:.7rem .9rem;background:rgba(74,222,128,.06);border:1px solid rgba(74,222,128,.15);border-radius:8px;font-size:.8rem;color:#86efac}
-/* REAL CLIMATE */
+
+/* IMAGES */
+.img-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.2rem;margin-top:1.5rem}
+.img-card{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden}
+.img-ph{height:120px;display:flex;align-items:center;justify-content:center;font-size:2.5rem;background:rgba(15,30,53,.8);border-bottom:1px solid var(--border)}
+.img-body{padding:1.2rem}
+.img-badge{display:inline-block;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:.25em .7em;border-radius:100px;margin-bottom:.6rem;font-weight:700}
+.badge-real{background:rgba(251,191,36,.15);color:var(--yellow);border:1px solid rgba(251,191,36,.3)}
+.img-body h3{font-size:.95rem;margin-bottom:.4rem}
+.img-body p{font-size:.83rem}
+
+/* CLIMATE */
 .climate-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:1.5rem}
 .climate-card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem}
 .climate-card h3{font-size:.95rem;margin-bottom:.4rem}
 .climate-card p{font-size:.83rem}
 .climate-tag{display:inline-block;font-size:.65rem;letter-spacing:.08em;text-transform:uppercase;padding:.2em .6em;border-radius:100px;margin-bottom:.5rem;font-weight:700;background:rgba(251,191,36,.12);color:var(--yellow);border:1px solid rgba(251,191,36,.25)}
+
+/* ===== ADDICTION SECTION ===== */
+.addiction-hero{background:linear-gradient(135deg,rgba(167,139,250,.08),rgba(244,114,182,.05));border:1px solid rgba(167,139,250,.2);border-radius:16px;padding:2rem;margin-bottom:3rem;text-align:center}
+.addiction-hero h2{color:var(--accent2);margin-bottom:.8rem}
+.addiction-hero p{max-width:580px;margin:0 auto}
+
+.loop-diagram{margin:2rem 0;background:var(--card);border:1px solid rgba(167,139,250,.2);border-radius:16px;padding:2rem}
+.loop-title{text-align:center;font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);margin-bottom:1.5rem;font-weight:700}
+.loop-nodes{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:.8rem}
+.loop-node{background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.3);border-radius:10px;padding:.7rem 1.1rem;font-size:.82rem;color:var(--white);text-align:center;min-width:120px}
+.loop-node.trigger{background:rgba(248,113,113,.1);border-color:rgba(248,113,113,.3);color:#fca5a5}
+.loop-node.reward{background:rgba(74,222,128,.1);border-color:rgba(74,222,128,.3);color:#86efac}
+.loop-node.craving{background:rgba(251,191,36,.1);border-color:rgba(251,191,36,.3);color:#fcd34d}
+.loop-arrow{color:var(--accent2);font-size:1.1rem;opacity:.6}
+
+.neuro-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem;margin-top:1.5rem}
+.neuro-card{background:var(--card);border:1px solid rgba(167,139,250,.2);border-radius:12px;padding:1.4rem;transition:border-color .2s}
+.neuro-card:hover{border-color:var(--accent2)}
+.neuro-icon{font-size:1.6rem;margin-bottom:.8rem}
+.neuro-card h3{font-size:1rem;color:var(--white);margin-bottom:.5rem}
+.neuro-card p{font-size:.87rem}
+
+.addiction-stages{margin-top:1.5rem}
+.stage{display:flex;gap:1.2rem;padding-bottom:2rem;position:relative}
+.stage::before{content:'';position:absolute;left:19px;top:40px;bottom:0;width:1px;background:rgba(167,139,250,.2)}
+.stage:last-child::before{display:none}
+.stage-dot{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--card);border:2px solid rgba(167,139,250,.4);display:flex;align-items:center;justify-content:center;font-size:.75rem;font-weight:700;color:var(--accent2)}
+.stage-content{padding-top:.4rem}
+.stage-label{font-size:.68rem;color:var(--accent2);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.2rem}
+.stage-content h3{font-size:1rem;margin-bottom:.4rem}
+.stage-content p{font-size:.87rem}
+
+.withdrawal-box{background:rgba(248,113,113,.05);border:1px solid rgba(248,113,113,.2);border-radius:12px;padding:1.4rem;margin:1.5rem 0}
+.withdrawal-title{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--red);font-weight:700;margin-bottom:.8rem}
+.withdrawal-symptoms{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:.6rem;margin-top:.8rem}
+.symptom{background:rgba(248,113,113,.08);border:1px solid rgba(248,113,113,.15);border-radius:8px;padding:.6rem .9rem;font-size:.82rem;color:#fca5a5}
+.symptom::before{content:'⚡ ';opacity:.6}
+
+.vrr-diagram{background:var(--card);border:1px solid rgba(167,139,250,.2);border-radius:12px;padding:1.4rem;margin:1.5rem 0}
+.vrr-title{font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent2);font-weight:700;margin-bottom:1rem}
+.vrr-bars{display:flex;flex-direction:column;gap:.8rem}
+.vrr-bar-row{display:grid;grid-template-columns:140px 1fr auto;gap:.8rem;align-items:center;font-size:.82rem}
+.vrr-bar-label{color:var(--gray);text-align:right}
+.vrr-track{background:rgba(30,48,80,.8);border-radius:100px;height:16px;overflow:hidden}
+.vrr-fill{height:100%;border-radius:100px;transition:width 1.2s ease}
+.vrr-bar-val{color:var(--accent2);font-weight:700;min-width:45px}
+@media(max-width:500px){.vrr-bar-row{grid-template-columns:1fr;gap:.3rem}.vrr-bar-label{text-align:left}}
+
+.exit-path{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;margin-top:1.5rem}
+.exit-card{background:var(--card);border:1px solid rgba(74,222,128,.2);border-radius:12px;padding:1.2rem}
+.exit-num{font-size:1.8rem;font-weight:800;color:rgba(74,222,128,.3);line-height:1;margin-bottom:.4rem}
+.exit-card h3{font-size:.95rem;color:var(--white);margin-bottom:.4rem}
+.exit-card p{font-size:.83rem}
+
+.analgesic-box{background:linear-gradient(135deg,rgba(167,139,250,.06),rgba(244,114,182,.04));border:1px solid rgba(167,139,250,.2);border-radius:12px;padding:1.6rem;margin:1.5rem 0}
+.analgesic-title{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent2);font-weight:700;margin-bottom:.8rem}
+.analgesic-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
+.analgesic-item{background:rgba(167,139,250,.06);border:1px solid rgba(167,139,250,.15);border-radius:8px;padding:.8rem}
+.analgesic-item .label{font-size:.7rem;color:var(--accent2);text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;font-weight:700}
+.analgesic-item p{font-size:.83rem;margin:0}
+@media(max-width:500px){.analgesic-grid{grid-template-columns:1fr}}
+
+footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-size:.8rem;color:var(--gray)}
 </style>
 </head>
 <body>
@@ -171,14 +270,15 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
 <nav>
   <a href="#science">Science</a>
   <a href="#appleman">Appleman</a>
-  <a href="#delivery">Delivery Problem</a>
-  <a href="#images">Those Images</a>
-  <a href="#ifreal">If It Were Real</a>
+  <a href="#delivery">Delivery</a>
+  <a href="#images">Images</a>
+  <a href="#ifreal">If Real</a>
   <a href="#lies">Real Lies</a>
-  <a href="#epistemic">Epistemic Model</a>
-  <a href="#claims">Claims vs Reality</a>
+  <a href="#epistemic">Epistemic</a>
+  <a href="#claims">Claims</a>
   <a href="#psychology">Psychology</a>
-  <a href="#climate">Real Climate Debate</a>
+  <a href="#addiction" class="addon">⬡ Addiction</a>
+  <a href="#climate">Climate</a>
   <a href="#verdict">Verdict</a>
 </nav>
 
@@ -188,7 +288,7 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
   <div class="hero-content">
     <div class="hero-label">Evidence-Based Analysis</div>
     <h1>The Complete Case<br>Against <span>Chemtrails</span></h1>
-    <p class="hero-sub">Physics. Engineering. Psychology. History. Every argument examined — including the ones used to dismiss this page.</p>
+    <p class="hero-sub">Physics. Engineering. Psychology. Neuroscience. Every argument examined — including the ones used to dismiss this page.</p>
     <div class="vbanner"><span class="dot"></span>Scientific verdict: not real — and here is exactly why every counter-argument fails</div>
   </div>
 </div>
@@ -198,8 +298,8 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
   <div class="stats">
     <div class="sc"><div class="snum">76/77</div><div class="slbl">Atmospheric scientists found zero evidence of spraying (2016 peer-reviewed survey)</div></div>
     <div class="sc"><div class="snum">1953</div><div class="slbl">Year Appleman derived the equation fully explaining all contrail behavior</div></div>
-    <div class="sc"><div class="snum">10⁹×</div><div class="slbl">Typical dilution factor for substances released at cruise altitude before reaching ground level</div></div>
-    <div class="sc"><div class="snum">0</div><div class="slbl">Independent atmospheric monitoring networks — across rival nations — that have detected anomalies consistent with covert spraying</div></div>
+    <div class="sc"><div class="snum">10⁹×</div><div class="slbl">Typical dilution factor for substances released at cruise altitude before reaching ground</div></div>
+    <div class="sc"><div class="snum">0</div><div class="slbl">Independent monitoring networks — across rival nations — detecting anomalies consistent with covert spraying</div></div>
     <div class="sc"><div class="snum">WWII</div><div class="slbl">Era of earliest persistent contrail photographs — decades before the theory</div></div>
   </div>
 </section>
@@ -213,10 +313,10 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
   <p>Contrails are a well-understood atmospheric phenomenon documented since the 1940s, governed by basic thermodynamics, and explained in aviation meteorology for decades. There are no unknowns in their formation.</p>
   <div class="cg">
     <div class="card"><div class="ci">🌡️</div><h3>Formation mechanism</h3><p>Jet engines produce hot, humid exhaust. At cruising altitude (~35,000 ft), ambient temperatures hover around −50°C. Hot water vapor instantly condenses and freezes into ice crystals — same physics as seeing your breath on a cold morning, just at 11,000 meters.</p></div>
-    <div class="card"><div class="ci">⏱️</div><h3>Why some persist and others don't</h3><p>Duration depends entirely on atmospheric humidity. In dry air, contrails vanish in seconds. In supersaturated air (RHi &gt; 100%), they persist for hours and spread into cirrus-like sheets. Fully described by the Appleman criterion — see below. No unknowns remain.</p></div>
+    <div class="card"><div class="ci">⏱️</div><h3>Why some persist and others don't</h3><p>Duration depends entirely on atmospheric humidity. In dry air, contrails vanish in seconds. In supersaturated air (RHi &gt; 100%), they persist for hours and spread into cirrus-like sheets. Fully described by the Appleman criterion — no unknowns remain.</p></div>
     <div class="card"><div class="ci">🌈</div><h3>Iridescent "rainbow" contrails</h3><p>Ice crystal light scattering — identical to the optics of halos and rainbow clouds. The German DLR Atmospheric Physics Department published a full predictive model. Standard optics. No extra chemicals.</p></div>
-    <div class="card"><div class="ci">✈️</div><h3>Why there are more trails now</h3><p>Global air traffic increased roughly 5–6× since the 1970s. More flights means more contrails. Climate change may also be increasing supersaturated atmospheric conditions at altitude. Both are documented, measurable causes.</p></div>
-    <div class="card"><div class="ci">🔲</div><h3>Grid patterns in the sky</h3><p>The US National Airspace System uses fixed flight lanes in a geometric grid. Aircraft on perpendicular routes at different times, in humid conditions, naturally produce crosshatch patterns. Air traffic control geometry — no coordination required.</p></div>
+    <div class="card"><div class="ci">✈️</div><h3>Why there are more trails now</h3><p>Global air traffic increased roughly 5–6× since the 1970s. More flights means more contrails. Climate change may also be increasing supersaturated atmospheric conditions at altitude. Documented, measurable causes.</p></div>
+    <div class="card"><div class="ci">🔲</div><h3>Grid patterns in the sky</h3><p>The US National Airspace System uses fixed flight lanes in a geometric grid. Aircraft on perpendicular routes at different times, in humid conditions, naturally produce crosshatch patterns. Air traffic control geometry.</p></div>
     <div class="card"><div class="ci">🧪</div><h3>What's actually in jet exhaust</h3><p>Combustion produces water vapor, CO₂, nitrogen oxides, trace soot, and trace sulfur. The contrail is almost entirely ice. No barium, no aluminum salts, no biological agents — and no delivery mechanism for these exists at scale without global atmospheric detection.</p></div>
   </div>
 </section>
@@ -228,10 +328,9 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
   <div class="sl">Thermodynamics — Schmidt 1941 / Appleman 1953</div>
   <h2>The equation that closes the question</h2>
   <p>The Schmidt-Appleman criterion predicts when a contrail forms and whether it persists. Derived in 1941, refined in 1953. Validated thousands of times across military and civilian aviation meteorology for over 70 years. It leaves no room for mystery.</p>
-
   <div class="eq-box">
     <div class="eq-label">Formation condition — mixing line slope</div>
-    <p style="color:#b8cadf;font-size:.9rem;margin-bottom:1rem">A contrail forms when the exhaust/air mixture crosses the ice saturation curve. The slope G of the mixing line in the temperature–vapour pressure diagram must exceed the local saturation curve slope:</p>
+    <p style="color:#b8cadf;font-size:.9rem;margin-bottom:1rem">A contrail forms when the exhaust/air mixture crosses the ice saturation curve. The slope G must exceed the local saturation curve slope:</p>
     <div id="eq1"></div>
     <div class="eq-params">
       <div class="eq-param"><span class="eq-sym">G</span><span class="eq-desc">Slope of the mixing line in the (T, e) diagram (Pa K⁻¹)</span></div>
@@ -243,10 +342,9 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
       <div class="eq-param"><span class="eq-sym">η</span><span class="eq-desc">Overall propulsion efficiency of the engine ≈ 0.30–0.40</span></div>
     </div>
   </div>
-
   <div class="eq-box">
     <div class="eq-label">Persistence condition — the single determining variable</div>
-    <p style="color:#b8cadf;font-size:.9rem;margin-bottom:1rem">Whether a contrail <em>persists</em> depends entirely on the relative humidity of the surrounding air with respect to ice (RHi). This single atmospheric variable explains all observed variation in contrail duration:</p>
+    <p style="color:#b8cadf;font-size:.9rem;margin-bottom:1rem">Whether a contrail <em>persists</em> depends entirely on relative humidity with respect to ice (RHi):</p>
     <div id="eq2"></div>
     <div class="eq-params">
       <div class="eq-param"><span class="eq-sym">RHi</span><span class="eq-desc">Relative humidity with respect to ice (%). The only variable determining persistence.</span></div>
@@ -254,40 +352,37 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
       <div class="eq-param"><span class="eq-sym">e<sub>s,i</sub>(T)</span><span class="eq-desc">Saturation vapour pressure over ice at temperature T (Pa)</span></div>
     </div>
   </div>
-
   <div class="rhi-bar">
     <div style="font-size:.8rem;font-weight:600;color:var(--white);margin-bottom:.3rem">The RHi spectrum — what it produces</div>
     <div class="rhi-track"><div class="rhi-marker"></div></div>
     <div class="rhi-labels"><span>RHi = 0%</span><span>RHi = 100%</span><span>RHi = 150%+</span></div>
     <div class="rhi-zones">
-      <div class="rhi-zone dry"><strong style="color:var(--red)">RHi &lt; 100% — Subsaturated</strong>Contrail forms briefly then sublimes. Disappears in seconds to minutes. The "normal" appearance on dry days.</div>
-      <div class="rhi-zone wet"><strong style="color:var(--green)">RHi &gt; 100% — Supersaturated</strong>Contrail persists and grows. Ice crystals attract more water vapor. Can last hours, spread kilometers, become indistinguishable from natural cirrus.</div>
+      <div class="rhi-zone dry"><strong style="color:var(--red)">RHi &lt; 100% — Subsaturated</strong>Contrail forms briefly then sublimes. Disappears in seconds to minutes.</div>
+      <div class="rhi-zone wet"><strong style="color:var(--green)">RHi &gt; 100% — Supersaturated</strong>Contrail persists, grows, spreads. Can last hours and become indistinguishable from natural cirrus.</div>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- DELIVERY PROBLEM -->
+<!-- DELIVERY -->
 <section id="delivery">
   <div class="sl">Engineering Analysis</div>
   <h2>The delivery problem — why it doesn't work</h2>
   <p>Even setting aside the atmospheric physics, the chemtrail theory fails on basic engineering grounds. High-altitude commercial aircraft are perhaps the worst conceivable delivery mechanism for any substance intended to affect ground-level populations.</p>
-
   <div class="delivery-grid">
     <div class="delivery-card">
       <div class="delivery-num">01</div>
       <div class="delivery-content">
         <h3>Atmospheric dispersion — the dilution is catastrophic</h3>
-        <p>Any substance released at cruise altitude (~10,000m) immediately encounters wind shear, turbulent wake diffusion, and continuous tropospheric convection. Using standard Gaussian atmospheric dispersion modelling, a substance released at 10km altitude reaches ground level diluted by:</p>
+        <p>Any substance released at ~10,000m encounters wind shear, turbulent wake diffusion, and continuous tropospheric convection. Using standard Gaussian atmospheric dispersion modelling:</p>
         <div class="dilution-box">
           <div class="dilution-num">10⁸ – 10¹⁰×</div>
-          <div class="dilution-label">100 million to 10 billion times diluted before reaching ground level. At this concentration, virtually any known substance — toxic or otherwise — is completely inert.</div>
+          <div class="dilution-label">100 million to 10 billion times diluted before reaching ground level. At this concentration, virtually any known substance is completely inert.</div>
         </div>
-        <p>To deliver a biologically meaningful dose at ground level you would need to release <strong>industrial quantities continuously</strong> — detectable by any atmospheric chemistry monitoring station on Earth, of which there are hundreds, operated by independent agencies worldwide, including those of rival nations.</p>
+        <p>To deliver a biologically meaningful dose at ground level requires releasing <strong>industrial quantities continuously</strong> — detectable by any atmospheric chemistry monitoring station on Earth, hundreds of which are operated by independent agencies worldwide, including those of rival nations.</p>
       </div>
     </div>
-
     <div class="delivery-card">
       <div class="delivery-num">02</div>
       <div class="delivery-content">
@@ -300,35 +395,31 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
           <tr><td>100 µm</td><td>0.25 m/s</td><td>~11 hours</td><td>Low</td></tr>
           <tr><td>1000 µm</td><td>~4 m/s</td><td>~41 minutes</td><td>Meaningful</td></tr>
         </table>
-        <p>Particles small enough to drift continent-wide carry essentially nothing. Particles large enough to carry a meaningful dose fall rapidly and concentrate near the release point. There is no particle size that satisfies both requirements simultaneously.</p>
+        <p>Particles small enough to drift continent-wide carry essentially nothing. Particles large enough to carry a meaningful dose fall rapidly. No particle size satisfies both requirements simultaneously.</p>
       </div>
     </div>
-
     <div class="delivery-card">
       <div class="delivery-num">03</div>
       <div class="delivery-content">
         <h3>Targeting is essentially impossible</h3>
-        <p>The jet stream — the dominant flow at cruise altitude — moves at 150–300 km/h and shifts direction unpredictably. Any substance released over a city at FL350 could be dispersed over the ocean, a neighbouring country, or spread across three countries by the time it reaches ground level. You cannot reliably target a city, region, or population this way. This would be immediately obvious to any engineer or military planner involved in the supposed program.</p>
+        <p>The jet stream moves at 150–300 km/h and shifts direction unpredictably. Any substance released over a city at FL350 could be dispersed over the ocean or three neighbouring countries by the time it reaches ground level. You cannot reliably target a city, region, or population this way. This would be immediately obvious to any engineer or military planner involved in the supposed program.</p>
       </div>
     </div>
-
     <div class="delivery-card">
       <div class="delivery-num">04</div>
       <div class="delivery-content">
         <h3>Actual covert atmospheric delivery — what it really looks like</h3>
-        <p>State actors have actually conducted covert atmospheric release operations. The documented cases are instructive:</p>
         <div class="cg" style="margin-top:.8rem">
           <div class="card" style="padding:1rem"><h3 style="font-size:.9rem">Operation Sea-Spray (US, 1950)</h3><p style="font-size:.82rem">US Navy released bacteria over San Francisco Bay — from a ship, at sea level, in fog, directly into the inhalation zone. Not from aircraft at 35,000 feet.</p></div>
-          <div class="card" style="padding:1rem"><h3 style="font-size:.9rem">Porton Down trials (UK, 1950s–60s)</h3><p style="font-size:.82rem">Released compounds from vehicles and low-flying aircraft over specific towns — at ground level, targeting specific streets. Not from commercial aviation at cruise altitude.</p></div>
-          <div class="card" style="padding:1rem"><h3 style="font-size:.9rem">The pattern</h3><p style="font-size:.82rem">Every documented covert atmospheric release was at ground level, in a specific location, maximizing concentration. The exact opposite of releasing substances at 10km altitude into the jet stream.</p></div>
+          <div class="card" style="padding:1rem"><h3 style="font-size:.9rem">Porton Down trials (UK, 1950s–70s)</h3><p style="font-size:.82rem">Released compounds from vehicles and low-flying aircraft over specific towns — at ground level, targeting specific streets. Not from commercial aviation at cruise altitude.</p></div>
+          <div class="card" style="padding:1rem"><h3 style="font-size:.9rem">The pattern</h3><p style="font-size:.82rem">Every documented covert atmospheric release was at ground level, specific location, maximum concentration. The exact opposite of releasing substances at 10km altitude into the jet stream.</p></div>
         </div>
       </div>
     </div>
   </div>
-
   <div class="ib">
     <div class="ibl">🎯 The core logic failure</div>
-    <p>The chemtrail theory assumes the most powerful covert actors in history chose the <strong>least effective possible delivery method</strong> for their supposed goals. If you were designing a covert population-level delivery system and someone proposed "release it from commercial jets at 35,000 feet into the jet stream," every engineer, chemist, toxicologist, and military planner in the room would immediately point to the water supply — which is direct, concentrated, dose-controllable, and historically the actual method used. The premise is not just unproven. It is physically incoherent.</p>
+    <p>The chemtrail theory assumes the most powerful covert actors in history chose the <strong>least effective possible delivery method</strong>. If you were designing a covert population-level delivery system and someone proposed "release it from commercial jets at 35,000 feet into the jet stream," every engineer, chemist, toxicologist, and military planner in the room would immediately point to the water supply — which is direct, concentrated, dose-controllable, and historically the actual method used.</p>
   </div>
 </section>
 
@@ -340,22 +431,13 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
   <h2>Those images — what they actually show</h2>
   <p>Three images circulate widely as "definitive proof" of chemtrail spraying equipment on aircraft. Here is what they actually document.</p>
   <div class="img-grid">
-    <div class="img-card">
-      <div class="img-ph">🎛️</div>
-      <div class="img-body"><span class="img-badge badge-real">Real device — misidentified</span><h3>"So I flip this" — cockpit panel</h3><p>Control panel from a <strong>cloud seeding aircraft</strong> — a small, specialised plane contracted by water authorities or agricultural agencies to induce rainfall using silver iodide flares. The "FIRE" label refers to pyrotechnic flare ignition — standard in cloud seeding rigs. Nothing to do with commercial aviation.</p></div>
-    </div>
-    <div class="img-card">
-      <div class="img-ph">🧪</div>
-      <div class="img-body"><span class="img-badge badge-real">Real device — misidentified</span><h3>Tubes mounted on aircraft wing</h3><p><strong>Silver iodide (AgI) flare racks</strong> on a cloud seeding aircraft — not a commercial airliner. Colour-coded labels identify cartridge composition. Certified, inspected, operated under meteorological permits. No commercial airliner has ever been certified with this equipment.</p></div>
-    </div>
-    <div class="img-card">
-      <div class="img-ph">🔥</div>
-      <div class="img-body"><span class="img-badge badge-real">Real compounds — benign</span><h3>"Potassium chloride, sodium chloride"</h3><p><strong>KCl and NaCl are food-grade salts</strong> — completely non-toxic ice nucleating agents. Published in every cloud seeding operational permit. Glowing tips are flares igniting. The aircraft is not a commercial passenger jet.</p></div>
-    </div>
+    <div class="img-card"><div class="img-ph">🎛️</div><div class="img-body"><span class="img-badge badge-real">Real device — misidentified</span><h3>"So I flip this" — cockpit panel</h3><p>Control panel from a <strong>cloud seeding aircraft</strong> — a small, specialised plane contracted by water authorities to induce rainfall using silver iodide flares. The "FIRE" label refers to pyrotechnic flare ignition. Nothing to do with commercial aviation.</p></div></div>
+    <div class="img-card"><div class="img-ph">🧪</div><div class="img-body"><span class="img-badge badge-real">Real device — misidentified</span><h3>Tubes mounted on aircraft wing</h3><p><strong>Silver iodide (AgI) flare racks</strong> on a cloud seeding aircraft — not a commercial airliner. Certified, inspected, operated under meteorological permits. No commercial airliner has ever been certified with this equipment.</p></div></div>
+    <div class="img-card"><div class="img-ph">🔥</div><div class="img-body"><span class="img-badge badge-real">Real compounds — benign</span><h3>"Potassium chloride, sodium chloride"</h3><p><strong>KCl and NaCl are food-grade salts</strong> — completely non-toxic ice nucleating agents. Published in every cloud seeding operational permit. The aircraft is not a commercial passenger jet.</p></div></div>
   </div>
   <div class="ib" style="margin-top:1.5rem">
     <div class="ibl">⚠ The conflation problem</div>
-    <p>Cloud seeding is real. It involves aircraft. It involves chemicals. This makes it perfect raw material for conspiracy theory — it sounds exactly like what chemtrails describe. But it is a distinct technology, different aircraft, different compounds, public regulation, producing no persistent trails. Using cloud seeding images as evidence for chemtrails is like using ambulances as evidence for secret organ harvesting — both involve medicine, neither is evidence of the other.</p>
+    <p>Cloud seeding is real. It involves aircraft. It involves chemicals. This makes it perfect raw material for conspiracy theory. But it is a distinct technology, different aircraft, different compounds, public regulation, producing no persistent trails. Using cloud seeding images as evidence for chemtrails is like using ambulances as evidence for secret organ harvesting — both involve medicine, neither is evidence of the other.</p>
   </div>
 </section>
 
@@ -365,39 +447,18 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
 <section id="ifreal">
   <div class="sl">The Falsifiability Test</div>
   <h2>If it were real — what we would expect to find</h2>
-  <p>This is the section that closes the "black budget invisible program" escape route. A covert global atmospheric spraying operation would be physically impossible to hide. Not because governments are trustworthy — but because the required anomalies would be detectable by dozens of independent actors with no interest in concealment.</p>
-  <p>Here is what a real program would produce — and what has actually been found:</p>
-
+  <p>A covert global atmospheric spraying operation would be physically impossible to hide. Not because governments are trustworthy — but because the required anomalies would be detectable by dozens of independent actors with no interest in concealment.</p>
   <div class="anomaly-grid">
-    <div class="anomaly-row">
-      <div class="anomaly-body"><h3>Anomalous fuel consumption in global aviation statistics</h3><p>Carrying sufficient chemical payload globally would require statistically significant extra fuel burn across the commercial aviation fleet. Aviation fuel consumption is tracked monthly by IATA, national authorities, and oil companies — independently, across rival nations. Any systematic anomaly would appear in publicly audited statistics.</p></div>
-      <div class="anomaly-status status-none"></div>
-    </div>
-    <div class="anomaly-row">
-      <div class="anomaly-body"><h3>Chemical supply chain anomalies</h3><p>Industrial quantities of any spraying agent — barium, aluminum compounds, or biological material — would require procurement, storage, distribution, and loading across thousands of airports worldwide. Chemical supply chains are tracked by manufacturers, distributors, customs authorities, and financial auditors. A program at the claimed scale would be visible in commodity markets.</p></div>
-      <div class="anomaly-status status-none"></div>
-    </div>
-    <div class="anomaly-row">
-      <div class="anomaly-body"><h3>Atmospheric chemical signatures detected by independent spectrometry</h3><p>Hundreds of atmospheric research stations operate globally — run by universities, national meteorological services, and environmental agencies in countries including China, Russia, Iran, and Brazil, which have strong political incentives to expose a Western atmospheric program. These stations continuously monitor trace chemical composition. No consistent anomalous signatures have been detected.</p></div>
-      <div class="anomaly-status status-none"></div>
-    </div>
-    <div class="anomaly-row">
-      <div class="anomaly-body"><h3>Divergence between nations' atmospheric composition</h3><p>If Western commercial aircraft were spraying over Western countries, atmospheric chemistry data from countries outside the flight corridors — Russia, China, large parts of Africa and South America — would show measurable divergence from affected areas. The spectrometric record is globally consistent with known sources.</p></div>
-      <div class="anomaly-status status-none"></div>
-    </div>
-    <div class="anomaly-row">
-      <div class="anomaly-body"><h3>Whistleblowers with verifiable technical evidence</h3><p>A program requiring tens of thousands of participants across multiple airlines, fuel companies, government agencies, and aircraft maintenance crews — across multiple nations with different governments — for 30+ years, would statistically guarantee multiple defections. Actual covert programs (MKULTRA, NSA mass surveillance, PRISM) were exposed within years, not decades, by participants with far less motivation to talk.</p></div>
-      <div class="anomaly-status status-none"></div>
-    </div>
-    <div class="anomaly-row">
-      <div class="anomaly-body"><h3>Correlated health anomalies in high air-traffic corridors</h3><p>If persistent contrails carried toxic agents, populations under major flight corridors — London, New York, Frankfurt — would show statistically higher rates of the claimed effects versus low-traffic areas, controlling for other variables. Epidemiological data does not show this pattern.</p></div>
-      <div class="anomaly-status status-none"></div>
-    </div>
+    <div class="anomaly-row"><div class="anomaly-body"><h3>Anomalous fuel consumption in global aviation statistics</h3><p>Carrying sufficient chemical payload globally would require statistically significant extra fuel burn. Aviation fuel consumption is tracked monthly by IATA, national authorities, and oil companies — independently, across rival nations. Any systematic anomaly would appear in publicly audited statistics.</p></div><div class="anomaly-status status-none"></div></div>
+    <div class="anomaly-row"><div class="anomaly-body"><h3>Chemical supply chain anomalies</h3><p>Industrial quantities of any spraying agent would require procurement, storage, distribution, and loading across thousands of airports worldwide. Chemical supply chains are tracked by manufacturers, distributors, customs authorities, and financial auditors. Visible in commodity markets at the claimed scale.</p></div><div class="anomaly-status status-none"></div></div>
+    <div class="anomaly-row"><div class="anomaly-body"><h3>Atmospheric chemical signatures detected by independent spectrometry</h3><p>Hundreds of atmospheric research stations operate globally — run by universities, national meteorological services, and agencies in countries including China, Russia, Iran, and Brazil, with strong political incentives to expose a Western atmospheric program. No consistent anomalous signatures have been detected.</p></div><div class="anomaly-status status-none"></div></div>
+    <div class="anomaly-row"><div class="anomaly-body"><h3>Atmospheric composition divergence between nations</h3><p>If Western commercial aircraft were spraying over Western countries, atmospheric chemistry data from countries outside the flight corridors would show measurable divergence from affected areas. The spectrometric record is globally consistent with known sources.</p></div><div class="anomaly-status status-none"></div></div>
+    <div class="anomaly-row"><div class="anomaly-body"><h3>Whistleblowers with verifiable technical evidence</h3><p>A program requiring tens of thousands of participants across multiple airlines, fuel companies, government agencies, and maintenance crews — across multiple competing nations — for 30+ years, would statistically guarantee multiple defections. Actual covert programs (MKULTRA, PRISM) were exposed within years by participants with far less motivation.</p></div><div class="anomaly-status status-none"></div></div>
+    <div class="anomaly-row"><div class="anomaly-body"><h3>Correlated health anomalies in high air-traffic corridors</h3><p>If persistent contrails carried toxic agents, populations under major flight corridors would show statistically higher rates of claimed effects versus low-traffic areas. Epidemiological data does not show this pattern.</p></div><div class="anomaly-status status-none"></div></div>
   </div>
-
   <div class="rb" style="margin-top:1.5rem">
     <div class="rbl">🔒 The "black budget" escape hatch — and why it fails</div>
-    <p>The standard response is: "It's a classified black program — of course there are no detectable anomalies." This response has a structural problem: it requires believing that a program involving every major commercial airline, every fuel supplier, every airport ground crew, and atmospheric monitoring agencies in geopolitically rival nations — has maintained perfect operational security for 30 years, with zero material evidence. For comparison, the Manhattan Project — the most tightly controlled classified program in history — employed ~130,000 people and was partially exposed within years. The chemtrail program, as described, would require more participants, more infrastructure, more countries, and more ongoing operational security than any covert program ever attempted. The absence of evidence here is not neutral — <strong>it is itself strong evidence of absence.</strong></p>
+    <p>The standard response is: "It's classified — of course there are no detectable anomalies." This requires believing that a program involving every major commercial airline, every fuel supplier, every airport ground crew, and atmospheric monitoring agencies in geopolitically rival nations has maintained perfect operational security for 30 years, with zero material evidence. The Manhattan Project — the most tightly controlled classified program in history — employed ~130,000 people and was partially exposed within years. The chemtrail program, as described, would require more participants, more infrastructure, more countries, and more ongoing operational security than any covert program ever attempted. <strong>The absence of evidence here is not neutral — it is itself strong evidence of absence.</strong></p>
   </div>
 </section>
 
@@ -407,45 +468,26 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
 <section id="lies">
   <div class="sl">Historical Record</div>
   <h2>Governments have lied. That is exactly the point.</h2>
-  <p>Dismissing chemtrail concerns by saying "governments don't do that" is both factually wrong and strategically counterproductive. Governments have conducted covert programs that harmed their own citizens. This page does not dispute that. What the historical record actually shows, however, is precisely <em>why</em> a chemtrail program of the claimed scale is structurally different — and why it cannot have remained hidden.</p>
-
+  <p>Dismissing chemtrail concerns by saying "governments don't do that" is factually wrong and strategically counterproductive. Governments have conducted covert programs that harmed their own citizens. What the historical record actually shows, however, is precisely why a chemtrail program of the claimed scale is structurally different.</p>
   <div class="lies-grid">
-    <div class="lie-card">
-      <h3>MKULTRA (US, 1953–73)</h3>
-      <p>CIA mind control experiments using LSD and other substances on unwitting subjects. Real. Documented. Deeply unethical. Exposed 20 years after it started — by a small team, through document leaks.</p>
-      <div class="lie-diff">~150 researchers involved. Exposed after ~20 years. Documents destroyed but partially recovered.</div>
-    </div>
-    <div class="lie-card">
-      <h3>Operation Sea-Spray (US, 1950)</h3>
-      <p>US Navy released Serratia marcescens bacteria over San Francisco Bay to test biological weapon dispersal. Real. Conducted at ground level, by a small naval team, in a specific location, over days — not decades.</p>
-      <div class="lie-diff">Small team. Ground level. Specific location. Duration: days. Declassified after decades.</div>
-    </div>
-    <div class="lie-card">
-      <h3>Porton Down aerosol trials (UK, 1950s–70s)</h3>
-      <p>UK government released zinc cadmium sulfide and other compounds from vehicles over specific towns to test dispersion. Real. Conducted by a small group, at ground level, in controlled locations.</p>
-      <div class="lie-diff">Contained team. Ground level. Specific towns. Exposed by parliamentary inquiry.</div>
-    </div>
-    <div class="lie-card">
-      <h3>Tuskegee Syphilis Study (US, 1932–72)</h3>
-      <p>US Public Health Service withheld treatment from Black men with syphilis without informed consent. Real. Sustained for 40 years by a small medical team in a contained institutional setting.</p>
-      <div class="lie-diff">~28 researchers. Institutionally contained. Exposed by one whistleblower after 40 years.</div>
-    </div>
+    <div class="lie-card"><h3>MKULTRA (US, 1953–73)</h3><p>CIA mind control experiments using LSD on unwitting subjects. Real. Documented. Deeply unethical. Exposed 20 years after it started — by a small team, through document leaks.</p><div class="lie-diff">~150 researchers involved. Exposed after ~20 years. Documents destroyed but partially recovered.</div></div>
+    <div class="lie-card"><h3>Operation Sea-Spray (US, 1950)</h3><p>US Navy released bacteria over San Francisco Bay to test biological weapon dispersal. Real. Conducted at ground level, by a small naval team, in a specific location, over days.</p><div class="lie-diff">Small team. Ground level. Specific location. Duration: days. Declassified after decades.</div></div>
+    <div class="lie-card"><h3>Porton Down aerosol trials (UK, 1950s–70s)</h3><p>UK government released compounds from vehicles over specific towns to test dispersion. Real. Conducted by a small group, at ground level, in controlled locations.</p><div class="lie-diff">Contained team. Ground level. Specific towns. Exposed by parliamentary inquiry.</div></div>
+    <div class="lie-card"><h3>Tuskegee Syphilis Study (US, 1932–72)</h3><p>US Public Health Service withheld treatment from Black men with syphilis without informed consent. Real. Sustained for 40 years by a small medical team in a contained institutional setting.</p><div class="lie-diff">~28 researchers. Institutionally contained. Exposed by one whistleblower after 40 years.</div></div>
   </div>
-
   <div class="gb" style="margin-top:1.5rem">
     <div class="gbl">📐 What the pattern actually tells us</div>
-    <p>Every real covert program followed the same structural pattern: <strong>small teams, contained operations, specific locations, limited duration</strong> — and still got exposed. The chemtrail theory requires the inverse: a global program, involving tens of thousands of participants across competing nations, for 30+ continuous years, with perfect security, and zero material evidence. The historical record of actual covert programs does not support the possibility of this — it actively argues against it. <strong>The fact that governments have lied before is precisely why we know how covert programs work — and why this one cannot be real as described.</strong></p>
+    <p>Every real covert program followed the same structural pattern: <strong>small teams, contained operations, specific locations, limited duration</strong> — and still got exposed. The chemtrail theory requires the inverse: global program, tens of thousands of participants across competing nations, 30+ continuous years, perfect security, zero material evidence. The historical record of actual covert programs does not support the possibility of this — it actively argues against it. <strong>The fact that governments have lied before is precisely why we know how covert programs work — and why this one cannot be real as described.</strong></p>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- EPISTEMIC MODEL -->
+<!-- EPISTEMIC -->
 <section id="epistemic">
   <div class="sl">Logic Structure</div>
   <h2>Two models of reasoning — one fundamental difference</h2>
-  <p>The most important structural difference between conspiracy thinking and scientific thinking is not intelligence, education, or access to data. It is what happens when evidence contradicts the model.</p>
-
+  <p>The most important structural difference between conspiracy thinking and scientific thinking is not intelligence or access to data. It is what happens when evidence contradicts the model.</p>
   <div class="epistem-grid">
     <div class="epistem-box conspiracy">
       <div class="epistem-title">Conspiracy model</div>
@@ -453,7 +495,7 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
         <div class="enode e-ev">New evidence appears</div>
         <div class="earrow">↓</div>
         <div class="enode e-bad">Does it support the theory?</div>
-        <div class="earrow">↙ Yes &nbsp;&nbsp;&nbsp;&nbsp; No ↘</div>
+        <div class="earrow">↙ Yes &nbsp;&nbsp;&nbsp; No ↘</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:.3rem">
           <div class="enode e-bad" style="font-size:.78rem">Confirmed. Theory strengthened.</div>
           <div class="enode e-bad" style="font-size:.78rem">Part of the cover-up. Theory strengthened.</div>
@@ -468,7 +510,7 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
         <div class="enode e-ev">New evidence appears</div>
         <div class="earrow">↓</div>
         <div class="enode e-good">Does it support the model?</div>
-        <div class="earrow">↙ Yes &nbsp;&nbsp;&nbsp;&nbsp; No ↘</div>
+        <div class="earrow">↙ Yes &nbsp;&nbsp;&nbsp; No ↘</div>
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:.5rem;margin-top:.3rem">
           <div class="enode e-good" style="font-size:.78rem">Model supported. Confidence increases.</div>
           <div class="enode e-good" style="font-size:.78rem">Model revised or rejected. Science advances.</div>
@@ -478,16 +520,10 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
       </div>
     </div>
   </div>
-
   <div class="cb" style="margin-top:1.5rem"><div class="ch">
-    <div class="cc cl"><div class="ccl">⚠ "Scientific consensus has been wrong before"</div><p>True. Plate tectonics, stomach ulcers, hand-washing — consensus has been overturned. But in each case, revision happened because <strong>new physical evidence forced it</strong>. The chemtrail theory offers no such evidence — only reinterpretation of existing observations that are already fully explained by known physics.</p></div>
-    <div class="cc cr"><div class="ccl">✓ What would actually change the science</div><p>Reproducible atmospheric samples — collected with proper chain of custody, by independent labs in multiple countries — showing chemical signatures inconsistent with known sources. This has never been produced. The bar is not "prove a negative." The bar is "provide replicable positive evidence." None exists.</p></div>
+    <div class="cc cl"><div class="ccl">⚠ "Scientific consensus has been wrong before"</div><p>True. Plate tectonics, stomach ulcers, hand-washing — consensus has been overturned. But in each case, revision happened because <strong>new physical evidence forced it</strong>. The chemtrail theory offers no such evidence — only reinterpretation of observations already fully explained by known physics.</p></div>
+    <div class="cc cr"><div class="ccl">✓ What would actually change the science</div><p>Reproducible atmospheric samples — collected with proper chain of custody, by independent labs in multiple countries — showing chemical signatures inconsistent with known sources. This has never been produced. Provide replicable positive evidence. None exists.</p></div>
   </div></div>
-
-  <div class="qb">
-    <p>"The fact that some geniuses were laughed at does not imply that all who are laughed at are geniuses. They laughed at Columbus, and they also laughed at Bozo the Clown."</p>
-    <div class="qs">— Carl Sagan. The asymmetry matters: extraordinary claims require extraordinary evidence, not extraordinary ridicule.</div>
-  </div>
 </section>
 
 <div class="divider"></div>
@@ -496,30 +532,12 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
 <section id="claims">
   <div class="sl">Point by Point</div>
   <h2>Common claims vs. what evidence shows</h2>
-  <div class="cb"><div class="ch">
-    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Normal contrails disappear quickly. Long-lasting ones prove added chemicals."</p></div>
-    <div class="cc cr"><div class="ccl">✓ Reality</div><p>Persistence is entirely determined by RHi — atmospheric humidity relative to ice. The Appleman equation (1953) predicts this with full accuracy. No mystery. No chemicals required.</p></div>
-  </div></div>
-  <div class="cb"><div class="ch">
-    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Soil tests show elevated barium and aluminum — proof of spraying."</p></div>
-    <div class="cc cr"><div class="ccl">✓ Reality</div><p>Both occur naturally. Sampling in metal-lidded Mason jars without acid wash heavily contaminates results. Expert atmospheric chemists: "the worst protocol imaginable — results totally worthless."</p></div>
-  </div></div>
-  <div class="cb"><div class="ch">
-    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Photos show spray equipment on aircraft."</p></div>
-    <div class="cc cr"><div class="ccl">✓ Reality</div><p>Cloud seeding flare racks on dedicated weather modification aircraft. Full analysis above. No commercial airliner has ever been certified with this equipment.</p></div>
-  </div></div>
-  <div class="cb"><div class="ch">
-    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"The 1996 USAF paper 'Weather as a Force Multiplier' proves this is real."</p></div>
-    <div class="cc cr"><div class="ccl">✓ Reality</div><p>A student fictional scenario exercise, explicitly labeled as such. Not a program, budget, or operational plan. The Air Force formally called the resulting conspiracy theory "a hoax."</p></div>
-  </div></div>
-  <div class="cb"><div class="ch">
-    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Rival nations like Russia and China would expose it if it were real."</p></div>
-    <div class="cc cr"><div class="ccl">✓ Reality</div><p>Exactly. This is one of the strongest arguments against the theory. Russia and China operate extensive independent atmospheric monitoring networks and have every geopolitical incentive to expose a Western atmospheric program. Neither has produced evidence — despite decades of active atmospheric research.</p></div>
-  </div></div>
-  <div class="cb"><div class="ch">
-    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Scientists and governments deny it — which proves the cover-up."</p></div>
-    <div class="cc cr"><div class="ccl">✓ Reality</div><p>This is structurally nonfalsifiable: evidence against becomes evidence for. See the epistemic model section above. A theory that cannot be disproved by any evidence is not a theory — it is an unfalsifiable belief system.</p></div>
-  </div></div>
+  <div class="cb"><div class="ch"><div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Normal contrails disappear quickly. Long-lasting ones prove added chemicals."</p></div><div class="cc cr"><div class="ccl">✓ Reality</div><p>Persistence is entirely determined by RHi — atmospheric humidity relative to ice. The Appleman equation (1953) predicts this with full accuracy. No mystery. No chemicals required.</p></div></div></div>
+  <div class="cb"><div class="ch"><div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Soil tests show elevated barium and aluminum — proof of spraying."</p></div><div class="cc cr"><div class="ccl">✓ Reality</div><p>Both occur naturally. Sampling in metal-lidded Mason jars without acid wash heavily contaminates results. Expert atmospheric chemists: "the worst protocol imaginable — results totally worthless."</p></div></div></div>
+  <div class="cb"><div class="ch"><div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Photos show spray equipment on commercial aircraft."</p></div><div class="cc cr"><div class="ccl">✓ Reality</div><p>Cloud seeding flare racks on dedicated weather modification aircraft. Full analysis above. No commercial airliner has ever been certified with this equipment.</p></div></div></div>
+  <div class="cb"><div class="ch"><div class="cc cl"><div class="ccl">⚠ Claim</div><p>"The 1996 USAF paper proves this is real."</p></div><div class="cc cr"><div class="ccl">✓ Reality</div><p>A student fictional scenario exercise, explicitly labeled as such. Not a program, budget, or operational plan. The Air Force formally called the resulting conspiracy theory "a hoax."</p></div></div></div>
+  <div class="cb"><div class="ch"><div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Rival nations like Russia and China would expose it if real."</p></div><div class="cc cr"><div class="ccl">✓ Reality</div><p>Exactly. Russia and China operate extensive independent atmospheric monitoring and have every geopolitical incentive to expose a Western atmospheric program. Neither has produced evidence — despite decades of active atmospheric research.</p></div></div></div>
+  <div class="cb"><div class="ch"><div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Scientists deny it — which proves the cover-up."</p></div><div class="cc cr"><div class="ccl">✓ Reality</div><p>This is structurally nonfalsifiable: evidence against becomes evidence for. See the epistemic model above. A theory that cannot be disproved by any evidence is not a theory — it is an unfalsifiable belief system.</p></div></div></div>
 </section>
 
 <div class="divider"></div>
@@ -528,53 +546,243 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
 <section id="psychology">
   <div class="sl">Cognitive Science</div>
   <h2>Why people believe it anyway</h2>
-  <p>The persistence of chemtrail belief is not a sign of stupidity. It's the result of predictable cognitive mechanisms, real social needs, and genuine — if misdirected — anxieties about institutions and the environment. Understanding this is more useful than ridicule.</p>
+  <p>The persistence of chemtrail belief is not a sign of stupidity. It results from predictable cognitive mechanisms, real social needs, and genuine — if misdirected — anxieties about institutions and the environment. Understanding this is more useful than ridicule.</p>
   <div class="fl">
     <div class="fi"><div class="fn">01</div><div class="fc"><h3>Apophenia — pattern recognition misfiring</h3><p>Human brains are wired to find patterns. This is adaptive — it's how we survived. But it also makes us see coordinated plots in crossed contrail lines. Normal pattern-finding applied to the wrong domain. Not stupidity. Miscalibration.</p></div></div>
     <div class="fi"><div class="fn">02</div><div class="fc"><h3>Loss of control — need for a comprehensible enemy</h3><p>Research consistently links conspiracy belief to a reduced sense of personal control. A world with secret spraying is terrifying — but it has an identifiable enemy and a chance to resist. Randomness and systemic complexity are psychologically harder to sit with than a hidden but comprehensible plot.</p></div></div>
-    <div class="fi"><div class="fn">03</div><div class="fc"><h3>Confirmation bias</h3><p>Once someone believes in chemtrails, every persistent contrail is evidence, every denial is a cover-up, every skeptic is paid off. The belief becomes its own filter. This is universal human cognition — the difference is only the object it latches onto.</p></div></div>
-    <div class="fi"><div class="fn">04</div><div class="fc"><h3>Institutional distrust with a legitimate root</h3><p>Governments have lied. Corporations have poisoned water supplies. Regulators have been captured. This distrust has real foundations — as documented above. The problem is not the distrust itself. It is when warranted skepticism of power attaches to a specific false theory, preventing engagement with the actual real concerns.</p></div></div>
+    <div class="fi"><div class="fn">03</div><div class="fc"><h3>Confirmation bias</h3><p>Once someone believes in chemtrails, every persistent contrail is evidence, every denial is a cover-up, every skeptic is paid off. The belief becomes its own filter. Universal human cognition — the difference is only the object it latches onto.</p></div></div>
+    <div class="fi"><div class="fn">04</div><div class="fc"><h3>Institutional distrust with a legitimate root</h3><p>Governments have lied. Corporations have poisoned water supplies. Regulators have been captured. This distrust has real foundations — as documented above. The problem is when warranted skepticism of power attaches to a specific false theory, preventing engagement with actual real concerns.</p></div></div>
     <div class="fi"><div class="fn">05</div><div class="fc"><h3>Community and identity — the "conversion" experience</h3><p>Many believers describe adopting the theory as quasi-religious — a "waking up." This creates strong in-group identity. Leaving the belief means losing community and the feeling of special knowledge. The social cost of changing your mind is often higher than the epistemic cost of maintaining the belief.</p></div></div>
     <div class="fi"><div class="fn">06</div><div class="fc"><h3>Grief and illness attribution</h3><p>Some believers adopted the theory after health crises or losing loved ones. "Chemtrails" offers a cause and something to fight. This is a profoundly human response to suffering. It also explains why direct factual rebuttal fails: the theory is doing emotional work. You cannot fact-check someone out of a coping mechanism.</p></div></div>
     <div class="fi"><div class="fn">07</div><div class="fc"><h3>Nonfalsifiability as structural protection</h3><p>The theory cannot be disproved. Every counterargument becomes evidence of the conspiracy. Real scientific theories must be falsifiable — this one is not. That structural immunity is what makes it intellectually bulletproof and, simultaneously, epistemically worthless.</p></div></div>
   </div>
-  <div class="qb" style="margin-top:2rem"><p>"On some level, chemtrail theorists would rather be targets of an evil conspiracy than face the limits of their knowledge and power."</p><div class="qs">— Calum Lister Matheson, communications researcher, The Conversation, 2025</div></div>
 </section>
 
 <div class="divider"></div>
 
-<!-- REAL CLIMATE DEBATE -->
+<!-- ===== ADDICTION SECTION ===== -->
+<section id="addiction">
+  <div class="sl purple">Neuropsychology</div>
+  <h2>The conspiracy addiction — beyond belief, into compulsion</h2>
+
+  <div class="addiction-hero">
+    <h2 style="font-size:1.4rem;color:var(--accent2)">"Addiction" is not a metaphor here.</h2>
+    <p>The engagement cycle with conspiracy theories activates the same neural reward circuits as substances and behavioural addictions — with one crucial difference: it is socially invisible as addiction. What follows is the neuropsychological mechanism, not as polemic, but as clinical description.</p>
+  </div>
+
+  <!-- DOPAMINE LOOP -->
+  <div class="loop-diagram">
+    <div class="loop-title">The dopamine discovery loop</div>
+    <div class="loop-nodes">
+      <div class="loop-node trigger">Anxiety / uncertainty<br><span style="font-size:.75rem;opacity:.7">something feels wrong</span></div>
+      <div class="loop-arrow">→</div>
+      <div class="loop-node">Search for explanation<br><span style="font-size:.75rem;opacity:.7">YouTube, Telegram, forums</span></div>
+      <div class="loop-arrow">→</div>
+      <div class="loop-node reward">Pattern found<br><span style="font-size:.75rem;opacity:.7">dopamine release</span></div>
+      <div class="loop-arrow">→</div>
+      <div class="loop-node">Uncertainty resolved<br><span style="font-size:.75rem;opacity:.7">relief, clarity, purpose</span></div>
+      <div class="loop-arrow">→</div>
+      <div class="loop-node craving">Tolerance builds<br><span style="font-size:.75rem;opacity:.7">needs bigger "facts"</span></div>
+      <div class="loop-arrow">→</div>
+      <div class="loop-node trigger">New anxiety<br><span style="font-size:.75rem;opacity:.7">loop repeats</span></div>
+    </div>
+  </div>
+
+  <p>The brain is fundamentally a prediction engine. Resolving uncertainty — even with a false explanation — is neurologically rewarding. Dopamine does not validate truth. It validates <strong>pattern found</strong>. This is the foundation of the addiction mechanism: the theory does not need to be true to be satisfying. It needs to be coherent.</p>
+
+  <!-- NEURO CARDS -->
+  <div class="neuro-grid">
+    <div class="neuro-card">
+      <div class="neuro-icon">🧠</div>
+      <h3>Dopamine & the prediction reward</h3>
+      <p>When a believer encounters a new "fact" confirming the theory, the ventral tegmental area releases dopamine — the same circuit activated by drugs, gambling, and social validation. The release is not tied to truth. It is tied to the subjective experience of <em>pattern resolved</em>. A satisfying conspiracy theory is neurochemically indistinguishable from a correct answer.</p>
+    </div>
+    <div class="neuro-card">
+      <div class="neuro-icon">📈</div>
+      <h3>Tolerance — escalation is structural</h3>
+      <p>The same "fact" produces diminishing dopamine response over time. The believer escalates — from "contrails persist too long" to "it's depopulation" to "it's transhumanist control" — not because the evidence escalated, but because the reward system requires larger doses. Escalation in conspiracy belief is not a psychological anomaly. It is pharmacological tolerance operating on a belief system.</p>
+    </div>
+    <div class="neuro-card">
+      <div class="neuro-icon">⚡</div>
+      <h3>The amygdala threat response</h3>
+      <p>When a cherished belief is challenged, the amygdala fires — the same structure that responds to physical threat. Neuroimaging studies show that identity-linked beliefs under attack activate the insula and amygdala identically to pain and danger signals. The body's response to "you're wrong about chemtrails" is physiologically similar to "you're in danger." This is not irrationality. It is neurology.</p>
+    </div>
+    <div class="neuro-card">
+      <div class="neuro-icon">🎰</div>
+      <h3>Variable ratio reinforcement — the slot machine structure</h3>
+      <p>The most powerful reinforcement schedule known to behavioural science is variable ratio — reward delivered unpredictably. Sometimes you find a "bombshell" immediately. Sometimes you search for hours and find nothing. The unpredictability of reward, not its frequency, produces maximum compulsion. This is identical to the mechanism that makes gambling irresistible — and it is the native structure of online conspiracy research.</p>
+    </div>
+    <div class="neuro-card">
+      <div class="neuro-icon">💊</div>
+      <h3>The analgesic function — pain management</h3>
+      <p>For a significant subset of believers — particularly those who adopted the theory during illness, grief, or loss of control — the conspiracy theory functions as <strong>cognitive analgesia</strong>. It converts diffuse, unaddressable pain into specific, fightable threat. It transforms powerlessness into mission. Attacking the belief increases the pain it was managing. The theory is not the problem. It is the symptom of the problem.</p>
+    </div>
+    <div class="neuro-card">
+      <div class="neuro-icon">🔗</div>
+      <h3>Social bonding as addiction maintenance</h3>
+      <p>Conspiracy communities provide oxytocin-mediated social bonding — the neurochemical of trust and belonging. The community validates the belief and the believer simultaneously. Leaving the belief means severing the social bonds that provide the oxytocin. The addiction is not just to the dopamine of discovery — it is to the oxytocin of belonging. Both must be addressed for exit to be possible.</p>
+    </div>
+  </div>
+
+  <!-- WITHDRAWAL -->
+  <div class="withdrawal-box">
+    <div class="withdrawal-title">Withdrawal — what happens when the belief is threatened</div>
+    <p style="color:#e0b8b8;font-size:.9rem;margin-bottom:.8rem">When someone confronts a believer with contradicting evidence, the typical response is not calm processing. It is acute psychological distress — a withdrawal syndrome:</p>
+    <div class="withdrawal-symptoms">
+      <div class="symptom">Acute anxiety</div>
+      <div class="symptom">Defensive hostility</div>
+      <div class="symptom">Immediate counter-evidence seeking</div>
+      <div class="symptom">Perception of personal attack</div>
+      <div class="symptom">Doubling down on the belief</div>
+      <div class="symptom">Social withdrawal from challenger</div>
+    </div>
+    <p style="color:#e0b8b8;font-size:.88rem;margin-top:.8rem">This is not stubbornness. It is the body restoring its supply of certainty after a perceived deprivation. Understanding this is why fact-bombing a believer is not only ineffective — it is often counterproductive. It triggers the withdrawal response, which strengthens the coping mechanism that the fact was trying to displace.</p>
+  </div>
+
+  <!-- VRR DIAGRAM -->
+  <div class="vrr-diagram">
+    <div class="vrr-title">Reinforcement schedule comparison — compulsion production</div>
+    <div class="vrr-bars">
+      <div class="vrr-bar-row">
+        <div class="vrr-bar-label">Fixed ratio<br><span style="font-size:.72rem">(predictable reward)</span></div>
+        <div class="vrr-track"><div class="vrr-fill" style="width:35%;background:linear-gradient(to right,#3b82f6,#60a5fa)"></div></div>
+        <div class="vrr-bar-val">Low</div>
+      </div>
+      <div class="vrr-bar-row">
+        <div class="vrr-bar-label">Fixed interval<br><span style="font-size:.72rem">(time-based reward)</span></div>
+        <div class="vrr-track"><div class="vrr-fill" style="width:45%;background:linear-gradient(to right,#3b82f6,#60a5fa)"></div></div>
+        <div class="vrr-bar-val">Moderate</div>
+      </div>
+      <div class="vrr-bar-row">
+        <div class="vrr-bar-label">Social media<br><span style="font-size:.72rem">(likes, comments)</span></div>
+        <div class="vrr-track"><div class="vrr-fill" style="width:72%;background:linear-gradient(to right,#f59e0b,#fbbf24)"></div></div>
+        <div class="vrr-bar-val">High</div>
+      </div>
+      <div class="vrr-bar-row">
+        <div class="vrr-bar-label">Gambling<br><span style="font-size:.72rem">(slot machine)</span></div>
+        <div class="vrr-track"><div class="vrr-fill" style="width:88%;background:linear-gradient(to right,#ef4444,#f87171)"></div></div>
+        <div class="vrr-bar-val">Very high</div>
+      </div>
+      <div class="vrr-bar-row">
+        <div class="vrr-bar-label">Conspiracy research<br><span style="font-size:.72rem">(online, algorithmic)</span></div>
+        <div class="vrr-track"><div class="vrr-fill" style="width:95%;background:linear-gradient(to right,#7c3aed,#a78bfa)"></div></div>
+        <div class="vrr-bar-val" style="color:var(--accent2)">Maximum</div>
+      </div>
+    </div>
+    <p style="font-size:.8rem;color:var(--gray);margin-top:1rem">Variable ratio reinforcement schedule — reward delivered unpredictably — produces maximum behavioural compulsion. Online conspiracy research, amplified by recommendation algorithms, is structurally a variable ratio reinforcement system.</p>
+  </div>
+
+  <!-- ANALGESIC BOX -->
+  <div class="analgesic-box">
+    <div class="analgesic-title">🩹 The analgesic architecture — what the theory converts</div>
+    <div class="analgesic-grid">
+      <div class="analgesic-item"><div class="label">Diffuse anxiety →</div><p>Specific, identifiable threat with a name and a face</p></div>
+      <div class="analgesic-item"><div class="label">Powerlessness →</div><p>Mission: spreading the truth, protecting others</p></div>
+      <div class="analgesic-item"><div class="label">Isolation →</div><p>Community of "those who see clearly"</p></div>
+      <div class="analgesic-item"><div class="label">Random suffering →</div><p>Caused suffering — with an accountable perpetrator</p></div>
+      <div class="analgesic-item"><div class="label">Cognitive chaos →</div><p>Total explanatory system — everything connects</p></div>
+      <div class="analgesic-item"><div class="label">Ordinary life →</div><p>Heroic narrative — the awakened resisting the powerful</p></div>
+    </div>
+    <p style="color:#c8b8e0;font-size:.88rem;margin-top:1rem">Each conversion is genuinely relieving. The theory works — as pain management. This is why the information deficit model ("they just need the correct facts") has been largely abandoned in psychology and public health. <strong>You cannot fact-check someone out of a functional pain management system without first addressing the underlying pain.</strong></p>
+  </div>
+
+  <!-- ADDICTION STAGES -->
+  <h3 style="margin:2rem 0 .5rem;font-size:1.1rem">Stages of conspiracy belief — a clinical progression</h3>
+  <div class="addiction-stages">
+    <div class="stage">
+      <div class="stage-dot">01</div>
+      <div class="stage-content">
+        <div class="stage-label">Entry</div>
+        <h3>The triggering event</h3>
+        <p>A period of stress, loss, illness, or loss of control creates psychological vulnerability. The person encounters conspiracy content — often algorithmically served — at a moment when it provides an emotionally satisfying explanation. The first "hit" of certainty after a period of confusion is disproportionately rewarding. Research shows that people most vulnerable to conspiracy adoption have often recently experienced a major loss of control or trust.</p>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="stage-dot">02</div>
+      <div class="stage-content">
+        <div class="stage-label">Consolidation</div>
+        <h3>Community absorption</h3>
+        <p>The person finds online communities that validate the belief and provide social belonging. The community has its own language, references, and rituals of truth-finding. Leaving becomes progressively harder as social investment deepens. The community provides oxytocin — the neurochemical of belonging and trust — that becomes tied to the belief system itself.</p>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="stage-dot">03</div>
+      <div class="stage-content">
+        <div class="stage-label">Tolerance</div>
+        <h3>Escalation of the theory</h3>
+        <p>Original claims stop producing sufficient dopamine. The believer escalates to more extreme claims — or to adjacent conspiracy theories that expand the explanatory system. This is pharmacological tolerance operating on a belief system. The person is not "going crazy" — they are managing diminishing returns on a reward system by increasing dose.</p>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="stage-dot">04</div>
+      <div class="stage-content">
+        <div class="stage-label">Identity fusion</div>
+        <h3>The belief becomes the self</h3>
+        <p>At this stage, the conspiracy theory is no longer something the person believes — it is something the person <em>is</em>. "I am someone who sees what others don't." Challenging the theory now triggers the full threat response of the amygdala because it is experienced as an attack on identity, not just an intellectual disagreement. This is the hardest stage to reach with factual arguments.</p>
+      </div>
+    </div>
+    <div class="stage">
+      <div class="stage-dot">05</div>
+      <div class="stage-content">
+        <div class="stage-label">Exit — when it happens</div>
+        <h3>How people actually leave</h3>
+        <p>Studies of ex-believers consistently show that exit almost never happens through exposure to correct information from strangers. It happens through: a trusted relationship outside the community that maintains connection without attacking the belief; accumulated internal contradictions the person cannot resolve; a new community that provides belonging before the old one is abandoned; and gradual drift rather than sudden rupture. The implication for anyone trying to help someone exit: <strong>maintain the relationship, don't attack the belief directly, and wait for internal doubt to do the work.</strong></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXIT PATHS -->
+  <h3 style="margin:2rem 0 .5rem;font-size:1.1rem">What the research says about effective intervention</h3>
+  <div class="exit-path">
+    <div class="exit-card">
+      <div class="exit-num">01</div>
+      <h3>Maintain the relationship</h3>
+      <p>The most consistent predictor of exit is having a trusted person outside the community who stays connected without making the relationship conditional on belief change. The relationship is the exit ramp.</p>
+    </div>
+    <div class="exit-card">
+      <div class="exit-num">02</div>
+      <h3>Ask questions, don't provide answers</h3>
+      <p>Motivational interviewing techniques — asking the person to explain their own reasoning, exploring internal contradictions, amplifying existing doubt — are consistently more effective than presenting counter-evidence.</p>
+    </div>
+    <div class="exit-card">
+      <div class="exit-num">03</div>
+      <h3>Address the underlying need</h3>
+      <p>If the theory is managing anxiety, grief, or loss of control, those need to be addressed directly. The theory will not release until what it is managing is addressed through other means.</p>
+    </div>
+    <div class="exit-card">
+      <div class="exit-num">04</div>
+      <h3>Never mock, never shame</h3>
+      <p>Shame activates the same defensive response as the withdrawal syndrome — it strengthens the belief as the person's community rallies around them against external attack. Mockery has zero deradicalisation effect and measurable negative effect.</p>
+    </div>
+  </div>
+
+  <div class="pb" style="margin-top:1.5rem">
+    <div class="pbl">📌 The information deficit model is dead</div>
+    <p>For decades, the default assumption was that people believe false things because they lack correct information — and that providing correct information would fix the problem. This model has been largely abandoned in psychology, public health, and deradicalisation research. What replaces it is more uncomfortable: <strong>people often believe what they need to believe, and changing that requires addressing the need, not just the belief.</strong> This page contains a great deal of correct information. That is necessary but not sufficient. The addiction section exists precisely because the people most in need of the physics section are the least reachable through physics alone.</p>
+  </div>
+
+  <div class="qb purple">
+    <p>"Conspiracy theories are not failures of reasoning. They are successes of a different kind of reasoning — one optimised for social cohesion, threat detection, and meaning-making rather than for empirical accuracy."</p>
+    <div class="qs">— Jan-Willem van Prooijen, experimental psychologist, author of <em>The Psychology of Conspiracy Theories</em></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CLIMATE -->
 <section id="climate">
   <div class="sl">The Real Environmental Debate</div>
   <h2>Contrails are not chemtrails. They are also not harmless.</h2>
   <p>This page is about the physics of contrails and the evidence for and against covert chemical spraying. It is not a defence of aviation. The actual environmental impact of contrails is a live scientific debate — and it is worth having on accurate terms.</p>
-
   <div class="climate-grid">
-    <div class="climate-card">
-      <div class="climate-tag">Real and studied</div>
-      <h3>Contrail radiative forcing</h3>
-      <p>Persistent contrails and contrail-induced cirrus clouds trap outgoing longwave radiation. Studies estimate contrail-induced cloudiness may contribute warming comparable to or exceeding aviation CO₂ — a non-trivial climate forcing. This is studied openly by IPCC, NASA, and DLR.</p>
-    </div>
-    <div class="climate-card">
-      <div class="climate-tag">Real and studied</div>
-      <h3>Aviation NOₓ emissions</h3>
-      <p>Nitrogen oxides emitted at cruise altitude contribute to ozone formation and methane destruction — net warming effects that persist independently of contrails. Aviation NOₓ climate impacts are an active research area with significant policy implications.</p>
-    </div>
-    <div class="climate-card">
-      <div class="climate-tag">Real and debated</div>
-      <h3>Contrail avoidance strategies</h3>
-      <p>Research suggests that rerouting a small fraction of flights to avoid high-humidity regions (where persistent contrails form) could significantly reduce warming impact at modest fuel cost. This is an active policy discussion — openly, in academic literature and aviation regulatory bodies.</p>
-    </div>
-    <div class="climate-card">
-      <div class="climate-tag">Real and contested</div>
-      <h3>Stratospheric aerosol injection research</h3>
-      <p>Deliberate injection of reflective particles into the stratosphere to reduce solar forcing is being seriously studied as a potential climate emergency measure. It is controversial, ethically complex, and involves real tradeoffs. The research is entirely public. None of it involves commercial aircraft contrails.</p>
-    </div>
+    <div class="climate-card"><div class="climate-tag">Real and studied</div><h3>Contrail radiative forcing</h3><p>Persistent contrails and contrail-induced cirrus clouds trap outgoing longwave radiation. Studies estimate contrail-induced cloudiness may contribute warming comparable to or exceeding aviation CO₂ — a non-trivial climate forcing. Studied openly by IPCC, NASA, and DLR.</p></div>
+    <div class="climate-card"><div class="climate-tag">Real and studied</div><h3>Aviation NOₓ emissions</h3><p>Nitrogen oxides emitted at cruise altitude contribute to ozone formation and methane destruction — net warming effects that persist independently of contrails. Aviation NOₓ climate impacts are an active research area with significant policy implications.</p></div>
+    <div class="climate-card"><div class="climate-tag">Real and debated</div><h3>Contrail avoidance strategies</h3><p>Research suggests rerouting a small fraction of flights to avoid high-humidity regions could significantly reduce warming impact at modest fuel cost. An active policy discussion — openly, in academic literature and aviation regulatory bodies.</p></div>
+    <div class="climate-card"><div class="climate-tag">Real and contested</div><h3>Stratospheric aerosol injection research</h3><p>Deliberate injection of reflective particles into the stratosphere is being seriously studied as a potential climate emergency measure. It is controversial, ethically complex, entirely public. None of it involves commercial aircraft contrails.</p></div>
   </div>
-
   <div class="cb" style="margin-top:1.5rem"><div class="ch">
     <div class="cc cl"><div class="ccl">What chemtrail theory does to this debate</div><p>By conflating real contrail climate effects with fictional secret spraying, the chemtrail theory actively <strong>damages</strong> the legitimate environmental debate. It discredits real concerns, polarizes the discussion, and makes it harder to have accurate public conversations about aviation's actual climate impact.</p></div>
-    <div class="cc cr"><div class="ccl">What the real debate needs</div><p>Accurate framing: contrails have real climate effects, studied openly, addressable through real policy. Aviation affects climate through multiple mechanisms. These are legitimate concerns that deserve engagement — entirely separate from the conspiracy theory, and far more tractable.</p></div>
+    <div class="cc cr"><div class="ccl">What the real debate needs</div><p>Accurate framing: contrails have real climate effects, studied openly, addressable through real policy. Aviation affects climate through multiple mechanisms. These are legitimate concerns — entirely separate from the conspiracy theory, and far more tractable.</p></div>
   </div></div>
 </section>
 
@@ -585,8 +793,8 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
   <div class="vbox">
     <div class="sl" style="justify-content:center">Conclusion</div>
     <h2>Where this leaves us</h2>
-    <p>The atmospheric physics is complete — Appleman (1953) fully accounts for all contrail behavior. The engineering is fatal — the delivery mechanism fails on dilution, particle physics, and targeting. The falsifiability test is clear — every anomaly a real program would produce is absent, across independent monitoring by rival nations. The historical record of actual covert programs shows they were small, contained, and still got exposed. The viral images document cloud seeding aircraft. The theory's epistemic structure is nonfalsifiable by design.</p>
-    <p>Governments have lied. Aviation does affect climate. Institutional distrust has legitimate roots. None of this is evidence for chemtrails — and conflating these real concerns with the conspiracy theory makes all of them harder to address.</p>
+    <p>The atmospheric physics is complete — Appleman (1953) fully accounts for all contrail behavior. The engineering is fatal — the delivery mechanism fails on dilution, particle physics, and targeting. The falsifiability test is clear — every anomaly a real program would produce is absent, across rival-nation monitoring. The historical record shows actual covert programs were small, contained, and still got exposed. The viral images document cloud seeding aircraft. The theory's epistemic structure is nonfalsifiable by design.</p>
+    <p>And the neuropsychology tells us why correct information alone is rarely sufficient. The belief, for many, is doing real work — managing real pain, providing real belonging, converting real powerlessness into real mission. That work needs to be acknowledged, not dismissed, if any of this is to reach the people who most need it.</p>
     <div class="pills">
       <span class="pill">Appleman (1953) — no unknowns in contrail behavior</span>
       <span class="pill">10⁹× dilution before ground level</span>
@@ -595,6 +803,7 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
       <span class="pill">Historical covert programs: small, contained, exposed</span>
       <span class="pill">Viral images = cloud seeding aircraft</span>
       <span class="pill">Theory is structurally nonfalsifiable</span>
+      <span class="pill">Belief addiction: dopamine, oxytocin, VRR</span>
       <span class="pill">Real contrail climate effects studied openly</span>
     </div>
   </div>
@@ -604,18 +813,20 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
   <div class="sl">References</div>
   <h2>Sources</h2>
   <div class="srcg">
-    <div class="si"><div class="sn2">Appleman, H.S. (1953)</div><div class="st">USAF: "A meteorological analysis of jet aircraft condensation trail formation." The foundational thermodynamic criterion for contrail formation and persistence.</div></div>
-    <div class="si"><div class="sn2">Environmental Research Letters (2016)</div><div class="st">UC Irvine / Carnegie / Near Zero — survey of 77 atmospheric scientists. First peer-reviewed study on chemtrail claims.</div></div>
-    <div class="si"><div class="sn2">Royal Aeronautical Society</div><div class="st">Dr. Ron Smith FRAeS — contrail formation mechanics, iridescent trail optics, wake aerodynamics.</div></div>
-    <div class="si"><div class="sn2">EPA / FAA / NASA / NOAA</div><div class="st">Joint fact sheet (2000) and EPA updated notice (2015). Four-agency coordinated response on contrail science.</div></div>
-    <div class="si"><div class="sn2">USAF Fact Sheet (2005)</div><div class="st">Formally labeled chemtrail theory "a hoax." Clarified the fictional nature of the 1996 scenario paper.</div></div>
-    <div class="si"><div class="sn2">Salata Institute, Harvard (2025)</div><div class="st">Analysis of chemtrails community dynamics, institutional distrust, and constructive intervention strategies.</div></div>
-    <div class="si"><div class="sn2">ACM CSCW Study (2021)</div><div class="st">In-depth interviews with 13 believers and 7 ex-believers on internet sensemaking and belief dynamics.</div></div>
-    <div class="si"><div class="sn2">The Conversation (2025)</div><div class="st">Calum Lister Matheson — why the conspiracy persists, grows, and enters mainstream politics.</div></div>
-    <div class="si"><div class="sn2">DLR Atmospheric Physics, Germany</div><div class="st">Gierens et al. — aerodynamic contrail formation, particle size prediction, optical scatter modelling.</div></div>
-    <div class="si"><div class="sn2">Operation Sea-Spray / Porton Down</div><div class="st">Declassified records of actual historical covert atmospheric release operations — all conducted at ground level.</div></div>
-    <div class="si"><div class="sn2">IPCC AR6 / Lee et al. (2021)</div><div class="st">Aviation climate forcing including contrail radiative effects. Published in Atmospheric Environment.</div></div>
-    <div class="si"><div class="sn2">Gaussian dispersion modelling</div><div class="st">Standard atmospheric dispersion models used for dilution factor estimates. Pasquill-Gifford stability classes.</div></div>
+    <div class="si"><div class="sn2">Appleman, H.S. (1953)</div><div class="st">USAF: "A meteorological analysis of jet aircraft condensation trail formation."</div></div>
+    <div class="si"><div class="sn2">Environmental Research Letters (2016)</div><div class="st">UC Irvine / Carnegie / Near Zero — survey of 77 atmospheric scientists.</div></div>
+    <div class="si"><div class="sn2">Royal Aeronautical Society</div><div class="st">Dr. Ron Smith FRAeS — contrail formation mechanics and iridescent trail optics.</div></div>
+    <div class="si"><div class="sn2">EPA / FAA / NASA / NOAA</div><div class="st">Joint fact sheet (2000) and EPA updated notice (2015).</div></div>
+    <div class="si"><div class="sn2">USAF Fact Sheet (2005)</div><div class="st">Formally labeled chemtrail theory "a hoax."</div></div>
+    <div class="si"><div class="sn2">van Prooijen, J.W. (2018)</div><div class="st"><em>The Psychology of Conspiracy Theories.</em> Routledge.</div></div>
+    <div class="si"><div class="sn2">ACM CSCW Study (2021)</div><div class="st">In-depth interviews with 13 believers and 7 ex-believers on internet sensemaking.</div></div>
+    <div class="si"><div class="sn2">Brotherton, R. (2015)</div><div class="st"><em>Suspicious Minds: Why We Believe Conspiracy Theories.</em> Bloomsbury.</div></div>
+    <div class="si"><div class="sn2">Salata Institute, Harvard (2025)</div><div class="st">Analysis of chemtrails community dynamics and intervention strategies.</div></div>
+    <div class="si"><div class="sn2">The Conversation (2025)</div><div class="st">Calum Lister Matheson — why the conspiracy persists and enters mainstream politics.</div></div>
+    <div class="si"><div class="sn2">DLR Atmospheric Physics, Germany</div><div class="st">Gierens et al. — aerodynamic contrail formation and optical scatter modelling.</div></div>
+    <div class="si"><div class="sn2">Operation Sea-Spray / Porton Down</div><div class="st">Declassified records of actual historical covert atmospheric release operations.</div></div>
+    <div class="si"><div class="sn2">IPCC AR6 / Lee et al. (2021)</div><div class="st">Aviation climate forcing including contrail radiative effects. Atmospheric Environment.</div></div>
+    <div class="si"><div class="sn2">Pasquill-Gifford dispersion models</div><div class="st">Standard atmospheric dispersion models used for dilution factor estimates.</div></div>
   </div>
 </section>
 
@@ -625,11 +836,32 @@ footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-si
 <script>
 katex.render("G = \\frac{EI_{H_2O} \\cdot c_p \\cdot p}{\\varepsilon \\cdot Q(1-\\eta)}", document.getElementById('eq1'), {displayMode:true,throwOnError:false});
 katex.render("RHi = \\frac{e}{e_{s,i}(T)} \\times 100\\%", document.getElementById('eq2'), {displayMode:true,throwOnError:false});
+
+// VRR bars animate on scroll
+var animated = false;
+function animateBars() {
+  if (animated) return;
+  var section = document.getElementById('addiction');
+  if (!section) return;
+  var rect = section.getBoundingClientRect();
+  if (rect.top < window.innerHeight * 0.8) {
+    animated = true;
+  }
+}
+window.addEventListener('scroll', animateBars);
+
+// Hero contrails
 (function(){
-  var cb=document.getElementById('cbg');
-  [{top:'12%',left:'-5%',w:'65%',rot:'-2deg',delay:'0s'},{top:'25%',left:'15%',w:'75%',rot:'1deg',delay:'3.5s'},{top:'40%',left:'-8%',w:'58%',rot:'-1.5deg',delay:'7s'},{top:'53%',left:'25%',w:'70%',rot:'2deg',delay:'1.5s'},{top:'65%',left:'5%',w:'60%',rot:'-0.5deg',delay:'5s'}].forEach(function(c){
-    var el=document.createElement('div');el.className='cline';
-    el.style.cssText='top:'+c.top+';left:'+c.left+';--w:'+c.w+';transform:rotate('+c.rot+');transform-origin:left center;background:linear-gradient(to right,transparent,rgba(180,210,255,0.4),transparent);animation-delay:'+c.delay+';animation-duration:'+(10+Math.random()*5).toFixed(1)+'s;';
+  var cb = document.getElementById('cbg');
+  [{top:'12%',left:'-5%',w:'65%',rot:'-2deg',delay:'0s'},
+   {top:'25%',left:'15%',w:'75%',rot:'1deg',delay:'3.5s'},
+   {top:'40%',left:'-8%',w:'58%',rot:'-1.5deg',delay:'7s'},
+   {top:'53%',left:'25%',w:'70%',rot:'2deg',delay:'1.5s'},
+   {top:'65%',left:'5%',w:'60%',rot:'-0.5deg',delay:'5s'}
+  ].forEach(function(c) {
+    var el = document.createElement('div');
+    el.className = 'cline';
+    el.style.cssText = 'top:'+c.top+';left:'+c.left+';--w:'+c.w+';transform:rotate('+c.rot+');transform-origin:left center;background:linear-gradient(to right,transparent,rgba(180,210,255,0.4),transparent);animation-delay:'+c.delay+';animation-duration:'+(10+Math.random()*5).toFixed(1)+'s;';
     cb.appendChild(el);
   });
 })();
