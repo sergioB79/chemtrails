@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chemtrails — The Complete Picture</title>
+<style>
+:root{--sky:#0a0f1e;--white:#f0f4ff;--gray:#8a9bb8;--accent:#60a5fa;--red:#f87171;--green:#4ade80;--yellow:#fbbf24;--card:#0f1e35;--border:#1e3050;--font:'Segoe UI',system-ui,sans-serif}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{background:var(--sky);color:var(--white);font-family:var(--font);line-height:1.7;font-size:16px}
+nav{position:sticky;top:0;z-index:100;background:rgba(10,15,30,.96);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:0 2rem;display:flex;overflow-x:auto}
+nav a{color:var(--gray);text-decoration:none;font-size:.8rem;letter-spacing:.05em;padding:1rem .9rem;white-space:nowrap;border-bottom:2px solid transparent;transition:all .2s}
+nav a:hover{color:var(--accent);border-bottom-color:var(--accent)}
+.hero{min-height:100vh;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;position:relative;overflow:hidden;padding:4rem 2rem;background:radial-gradient(ellipse at 50% 30%,#0d1f3c 0%,#0a0f1e 70%)}
+.cbg{position:absolute;inset:0;pointer-events:none}
+.cline{position:absolute;height:2px;border-radius:2px;opacity:0;animation:fly 14s ease-in-out infinite}
+@keyframes fly{0%{opacity:0;width:0}15%{opacity:.5}70%{opacity:.2}100%{opacity:0;width:var(--w)}}
+.hero-content{position:relative;z-index:2;max-width:760px}
+.hero-label{display:inline-block;font-size:.75rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);background:rgba(59,130,246,.1);border:1px solid rgba(59,130,246,.3);padding:.35em 1em;border-radius:100px;margin-bottom:1.5rem}
+.hero h1{font-size:clamp(2.5rem,6vw,4.5rem);font-weight:800;line-height:1.1;letter-spacing:-.02em;margin-bottom:1rem}
+.hero h1 span{color:var(--accent)}
+.hero-sub{font-size:1.1rem;color:var(--gray);max-width:540px;margin:0 auto 2rem}
+.vbanner{display:inline-flex;align-items:center;gap:.6rem;background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.4);border-radius:8px;padding:.8rem 1.4rem;font-size:.95rem;color:var(--green);font-weight:600}
+.dot{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.3}}
+section{max-width:900px;margin:0 auto;padding:5rem 2rem}
+.divider{max-width:900px;margin:0 auto;border-top:1px solid var(--border)}
+.sl{font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--accent);margin-bottom:.6rem;display:flex;align-items:center;gap:.5rem}
+.sl::after{content:'';flex:1;max-width:40px;height:1px;background:var(--accent);opacity:.4}
+h2{font-size:clamp(1.6rem,3vw,2.2rem);font-weight:700;line-height:1.2;margin-bottom:1.5rem;letter-spacing:-.01em}
+h3{font-size:1.05rem;font-weight:600;margin-bottom:.5rem}
+p{color:#b8cadf;margin-bottom:1rem}p:last-child{margin-bottom:0}
+strong{color:var(--white)}
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:1rem;margin:2rem 0}
+.sc{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.2rem;text-align:center}
+.sn{font-size:2rem;font-weight:800;color:var(--accent);line-height:1;margin-bottom:.3rem}
+.sg{font-size:.78rem;color:var(--gray)}
+.cg{display:grid;grid-template-columns:repeat(auto-fit,minmax(255px,1fr));gap:1rem;margin-top:1.5rem}
+.card{background:var(--card);border:1px solid var(--border);border-radius:12px;padding:1.4rem;transition:border-color .2s}
+.card:hover{border-color:#3b82f6}
+.ci{font-size:1.6rem;margin-bottom:.8rem}
+.cb{background:var(--card);border:1px solid var(--border);border-radius:12px;overflow:hidden;margin-bottom:1rem}
+.ch{display:grid;grid-template-columns:1fr 1fr}
+.cc{padding:1rem 1.2rem}
+.cc.cl{background:rgba(248,113,113,.08);border-right:1px solid var(--border)}
+.cc.cr{background:rgba(74,222,128,.06)}
+.ccl{font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;margin-bottom:.5rem;font-weight:700}
+.cc.cl .ccl{color:var(--red)}.cc.cr .ccl{color:var(--green)}
+.cc p{font-size:.88rem;margin:0}
+.tl{margin-top:1.5rem}
+.ti{display:flex;gap:1.2rem;padding-bottom:1.8rem;position:relative}
+.ti::before{content:'';position:absolute;left:19px;top:28px;bottom:0;width:1px;background:var(--border)}
+.ti:last-child::before{display:none}
+.td{flex-shrink:0;width:40px;height:40px;border-radius:50%;background:var(--card);border:2px solid var(--border);display:flex;align-items:center;justify-content:center;font-size:.58rem;font-weight:700;color:var(--accent);text-align:center;line-height:1.1}
+.tc{padding-top:.5rem}
+.ty{font-size:.7rem;color:var(--accent);letter-spacing:.1em;text-transform:uppercase;margin-bottom:.2rem}
+.qb{border-left:3px solid var(--accent);padding:1rem 1.5rem;background:rgba(59,130,246,.05);border-radius:0 8px 8px 0;margin:1.5rem 0}
+.qb p{font-style:italic;color:var(--white)}
+.qs{font-size:.8rem;color:var(--gray);margin-top:.4rem}
+.fl{margin-top:1.2rem}
+.fi{display:flex;gap:1rem;padding:1rem 0;border-bottom:1px solid var(--border)}
+.fi:last-child{border-bottom:none}
+.fn{flex-shrink:0;font-size:.7rem;font-weight:800;color:var(--accent);padding-top:.1rem;min-width:24px}
+.fc h3{margin-bottom:.3rem;font-size:1rem}
+.fc p{font-size:.88rem}
+.ib{background:rgba(251,191,36,.06);border:1px solid rgba(251,191,36,.25);border-radius:12px;padding:1.4rem;margin:1.5rem 0}
+.ibl{font-size:.7rem;letter-spacing:.12em;text-transform:uppercase;color:var(--yellow);font-weight:700;margin-bottom:.5rem}
+.ib p{color:#d4b896}
+.vbox{background:linear-gradient(135deg,rgba(59,130,246,.08),rgba(74,222,128,.05));border:1px solid rgba(59,130,246,.2);border-radius:16px;padding:2.5rem;text-align:center;margin:2rem 0}
+.vbox h2{margin-bottom:1rem}
+.vbox p{max-width:600px;margin:0 auto 1rem}
+.pills{display:flex;flex-wrap:wrap;gap:.6rem;justify-content:center;margin-top:1.5rem}
+.pill{background:rgba(74,222,128,.1);border:1px solid rgba(74,222,128,.3);color:var(--green);padding:.4em 1em;border-radius:100px;font-size:.82rem;font-weight:600}
+.srcg{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:.8rem;margin-top:1rem}
+.si{background:var(--card);border:1px solid var(--border);border-radius:8px;padding:.8rem 1rem;font-size:.82rem}
+.sn2{color:var(--white);font-weight:600;margin-bottom:.2rem}
+.st{color:var(--gray);font-size:.75rem}
+footer{border-top:1px solid var(--border);padding:2rem;text-align:center;font-size:.8rem;color:var(--gray)}
+@media(max-width:600px){.ch{grid-template-columns:1fr}.cc.cl{border-right:none;border-bottom:1px solid var(--border)}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#science">The Science</a>
+  <a href="#claims">Claims vs Reality</a>
+  <a href="#origin">Origin</a>
+  <a href="#consensus">Expert Consensus</a>
+  <a href="#psychology">Psychology</a>
+  <a href="#geo">Real Geoengineering</a>
+  <a href="#verdict">Verdict</a>
+</nav>
+
+<div class="hero">
+  <div class="cbg" id="cbg"></div>
+  <div class="hero-content">
+    <div class="hero-label">Evidence-Based Analysis</div>
+    <h1>The Complete Case<br>Against <span>Chemtrails</span></h1>
+    <p class="hero-sub">Every scientific claim examined. Every conspiracy argument addressed. No bias — just what the data says.</p>
+    <div class="vbanner"><span class="dot"></span>Scientific Verdict: Not real. 98.7% expert consensus. Zero peer-reviewed evidence.</div>
+  </div>
+</div>
+
+<section>
+  <div class="stats">
+    <div class="sc"><div class="sn">76/77</div><div class="sg">Atmospheric scientists found zero evidence of spraying (2016 peer-reviewed survey)</div></div>
+    <div class="sc"><div class="sn">1996</div><div class="sg">Year a misread USAF student paper triggered the entire conspiracy</div></div>
+    <div class="sc"><div class="sn">~17%</div><div class="sg">People who believed it "partly true" in a 2011 international survey</div></div>
+    <div class="sc"><div class="sn">4</div><div class="sg">Federal agencies (EPA, FAA, NASA, NOAA) who jointly denied chemtrails in 2000</div></div>
+    <div class="sc"><div class="sn">WWII</div><div class="sg">Era of earliest persistent contrail photographs — decades before the theory</div></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="science">
+  <div class="sl">Atmospheric Physics</div>
+  <h2>What contrails actually are</h2>
+  <p>Contrails — condensation trails — are not a modern mystery. They are a well-understood atmospheric phenomenon documented since the 1940s, governed by basic thermodynamics, and explained in aviation meteorology textbooks for decades.</p>
+  <div class="cg">
+    <div class="card"><div class="ci">🌡️</div><h3>Formation mechanism</h3><p>Jet engines produce hot, humid exhaust. At cruising altitude (~35,000 ft), ambient temperatures hover around −50°C. Hot water vapor instantly condenses and freezes into ice crystals. Same physics as seeing your breath on a cold morning — just at 11,000 meters.</p></div>
+    <div class="card"><div class="ci">⏱️</div><h3>Why some persist and others don't</h3><p>Duration depends entirely on atmospheric humidity. In dry air, contrails vanish in seconds. In supersaturated air (humidity above 100% relative to ice), they persist for hours and spread into cirrus-like sheets. Physics, not chemistry. Pilots have received contrail altitude briefings since the 1950s.</p></div>
+    <div class="card"><div class="ci">🌈</div><h3>Iridescent "rainbow" contrails</h3><p>Contrails sometimes shimmer with color when backlit by the sun. This is ice crystal light scattering — identical to the optics of halos and rainbow clouds. The German DLR Atmospheric Physics Department published a full predictive model. Standard optics. No extra chemicals.</p></div>
+    <div class="card"><div class="ci">✈️</div><h3>Why there are more trails now</h3><p>Global air traffic increased roughly 5–6× since the 1970s. More flights means more contrails. Climate change may also be increasing the frequency of supersaturated atmospheric conditions at altitude. Documented, measurable causes.</p></div>
+    <div class="card"><div class="ci">🔲</div><h3>Grid patterns in the sky</h3><p>The US National Airspace System uses fixed flight lanes arranged in a geometric grid. Aircraft on perpendicular routes at different times, in humid conditions, naturally produce crosshatch patterns. Air traffic control geometry — no coordination required.</p></div>
+    <div class="card"><div class="ci">🧪</div><h3>What's actually in jet exhaust</h3><p>Combustion produces water vapor, CO₂, nitrogen oxides, trace soot, and trace sulfur. The contrail is almost entirely ice. No barium, no aluminum salts, no biological agents — and no delivery mechanism capable of doing this at scale exists without global atmospheric detection.</p></div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="claims">
+  <div class="sl">Point by Point</div>
+  <h2>Common claims vs. what evidence shows</h2>
+
+  <div class="cb"><div class="ch">
+    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Normal contrails disappear quickly. Long-lasting ones prove added chemicals."</p></div>
+    <div class="cc cr"><div class="ccl">✓ Reality</div><p>Persistence is determined by atmospheric humidity. Both short and long contrails are pure ice. The variable is air saturation, not chemistry. Documented in aviation meteorology since 1953.</p></div>
+  </div></div>
+
+  <div class="cb"><div class="ch">
+    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Soil and water tests show elevated barium and aluminum — proof of spraying."</p></div>
+    <div class="cc cr"><div class="ccl">✓ Reality</div><p>Both elements occur naturally in soil and water. The sampling methods used — metal-lidded Mason jars, no acid wash — heavily contaminate results. Expert atmospheric chemists called it "the worst protocol imaginable." Results described as "totally worthless."</p></div>
+  </div></div>
+
+  <div class="cb"><div class="ch">
+    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Photos show nozzles and spray equipment. Cockpit 'chemtrail switches' exist."</p></div>
+    <div class="cc cr"><div class="ccl">✓ Reality</div><p>"Nozzle" images are aerodynamic fairings or antennae. "Switch" images are edited fakes or photos from water-ballast test flights — where water barrels simulate passenger weight during aircraft certification. Standard aerospace engineering, fully documented.</p></div>
+  </div></div>
+
+  <div class="cb"><div class="ch">
+    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"The 1996 USAF paper 'Weather as a Force Multiplier' proves this is real."</p></div>
+    <div class="cc cr"><div class="ccl">✓ Reality</div><p>It was a student exercise in speculative scenario planning, explicitly labeled "fictional representations of future situations." Not a program, not a budget, not operational. The Air Force confirmed this repeatedly. This misreading is the founding error of the entire conspiracy.</p></div>
+  </div></div>
+
+  <div class="cb"><div class="ch">
+    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"Scientists and governments deny it — which proves the cover-up."</p></div>
+    <div class="cc cr"><div class="ccl">✓ Reality</div><p>This is structurally nonfalsifiable: evidence against the theory becomes evidence for it. Psychologist Rob Brotherton calls this "heads I win, tails you lose." A theory that cannot be disproved by any evidence is not a scientific theory — it's unfalsifiable belief.</p></div>
+  </div></div>
+
+  <div class="cb"><div class="ch">
+    <div class="cc cl"><div class="ccl">⚠ Claim</div><p>"How could thousands of people stay silent about a program this large?"</p></div>
+    <div class="cc cr"><div class="ccl">✓ Reality</div><p>Exactly the right question — and it argues against the theory. A global commercial aviation spraying program requires tens of thousands of pilots, crew, engineers, and officials, all poisoning their own families, with zero credible leaks in 30 years. As astronomer Bob Berman noted, it requires "40,000 pilots to be in on the plot to poison their own children."</p></div>
+  </div></div>
+</section>
+
+<div class="divider"></div>
+
+<section id="origin">
+  <div class="sl">History</div>
+  <h2>How the theory was born and spread</h2>
+  <div class="tl">
+    <div class="ti"><div class="td">1940s</div><div class="tc"><div class="ty">World War II</div><h3>Persistent contrails documented</h3><p>WWII photographs show long-lasting contrails from Allied bomber formations — decades before any supposed chemtrail program. This alone refutes the claim that persistent trails are a modern anomaly requiring a new explanation.</p></div></div>
+    <div class="ti"><div class="td">1953</div><div class="tc"><div class="ty">USAF Meteorology</div><h3>Official contrail science established</h3><p>The Air Force formally documented contrail formation and persistence variables. Pilots were briefed on contrail formation altitudes — because persistent trails revealed aircraft positions to enemies. Not new science.</p></div></div>
+    <div class="ti"><div class="td">1996</div><div class="tc"><div class="ty">The Origin Error</div><h3>A misread USAF paper triggers everything</h3><p>A student paper titled "Weather as a Force Multiplier: Owning the Weather in 2025" — a fictional military scenario exercise — is published. Early internet forums misread it as proof of an active program. The USAF later formally called the resulting conspiracy theory "a hoax."</p></div></div>
+    <div class="ti"><div class="td">2000</div><div class="tc"><div class="ty">Federal Response</div><h3>Four agencies publish a joint fact sheet</h3><p>EPA, FAA, NASA, and NOAA jointly explain contrail science. Many believers interpret the coordinated multi-agency response as further evidence of a cover-up — a textbook illustration of the theory's nonfalsifiable structure at work.</p></div></div>
+    <div class="ti"><div class="t
